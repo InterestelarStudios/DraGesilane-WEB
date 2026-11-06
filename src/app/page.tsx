@@ -43,7 +43,15 @@ export default function Home() {
             </p>
 
             <div className="hero-rest">
-              <h2 className="hero-badge-title">Dra. Gesilane Maurício</h2>
+              <div className="hero-logo">
+                <Image
+                  src="/images/logo-gesilane.png"
+                  alt="Dra. Gesilane Maurício — Psicóloga, CRP 20/14363"
+                  width={380}
+                  height={380}
+                  priority
+                />
+              </div>
 
               <h1>Cuidar das emoções e do desenvolvimento faz parte da infância.</h1>
 

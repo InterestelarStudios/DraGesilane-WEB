@@ -180,12 +180,8 @@ body {
 .hero-media {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 4.8;
-  max-width: 440px;
-  margin: 0 auto;
-  border-radius: var(--arch);
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
 }
 
 .hero-media img {
@@ -201,11 +197,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 18%;
+  height: 35%;
   background: linear-gradient(
     to bottom,
     rgba(250, 247, 241, 0) 0%,
-    rgba(250, 247, 241, 0.28) 55%,
+    rgba(250, 247, 241, 0.35) 45%,
+    rgba(250, 247, 241, 0.85) 80%,
     var(--cream) 100%
   );
   pointer-events: none;
@@ -268,13 +265,16 @@ body {
   margin-right: auto !important;
 }
 
-.hero-badge-title {
-  margin: 0 auto 10px;
-  font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--sage-deep);
-  letter-spacing: -0.01em;
+.hero-logo {
+  width: min(190px, 50vw);
+  margin: 12px auto 16px;
+}
+
+.hero-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .hero-copy .leaf-rule {
@@ -1083,6 +1083,11 @@ footer {
 
   .hero-media::after {
     display: none;
+  }
+
+  .hero-logo {
+    width: 175px;
+    margin: 8px 0 16px;
   }
 
   .hero-copy {
