@@ -2,22 +2,22 @@
 
 :root {
   --bg: #FFFFFF;
-  --sand: #F8F9FA;
-  --sand-warm: #F1F4F6;
+  --cream-soft: #FBF9F5;
+  --card-bg: #F4F7F4;
   
-  /* Azul Oceano / Atlântico Profundo & Acolhedor */
-  --ocean-deep: #16425B;
-  --ocean: #2F6690;
-  --ocean-soft: #E8F1F5;
-  --ocean-border: #D1E3EC;
+  /* Verde Eucalipto / Floresta Acolhedor & Sofisticado */
+  --green-deep: #2D4A3E;
+  --green-primary: #3D6454;
+  --green-soft: #E8F0EC;
+  --green-border: #D2E2D9;
   
-  /* Toques suaves de Âmbar/Dourado Sereno */
-  --amber-soft: #FAF3E0;
-  --amber-deep: #B58327;
+  /* Toque de Terracota / Dourado Suave */
+  --accent-gold: #C08A3E;
+  --accent-soft: #FAF4EB;
   
-  --text: #1F2937;
-  --muted: #4B5563;
-  --line: #E2E8F0;
+  --text: #242E28;
+  --muted: #526359;
+  --line: #E2ECE5;
   --white: #FFFFFF;
 }
 
