@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -9,30 +9,30 @@ const cormorant = Cormorant_Garamond({
   style: ["normal", "italic"],
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "Dra. Gesilane Maurício | Psicóloga Clínica, Terapeuta ABA e Mediadora Escolar",
+  title: "Dra. Gesilane Maurício | Psicóloga infantil, ABA e Mediação Escolar",
   description:
-    "Atendimento psicológico clínico especializado, Assistência Terapêutica em ABA e Mediação Escolar Inclusiva com a Dra. Gesilane Maurício (CRP 20/14363). Cuidado humanizado e baseado em evidências.",
+    "Psicóloga infantil para crianças, Assistente Terapêutica em ABA e Mediadora Escolar. CRP 20/14363. Psicoterapia e acompanhamento comportamental para ajudar seu filho a compreender emoções e desenvolver autonomia.",
   keywords: [
+    "Gesilane Maurício",
     "Dra. Gesilane Maurício",
-    "Psicóloga Gesilane Maurício",
+    "Psicóloga infantil Manaus",
     "CRP 20/14363",
-    "Psicologia Infantil Manaus",
-    "Assistente Terapêutica ABA",
-    "Mediação Escolar TEA",
-    "Análise do Comportamento Aplicada",
-    "Autismo Manaus"
+    "Terapia ABA",
+    "Assistente Terapêutica",
+    "Mediação Escolar",
+    "Autismo Infantil"
   ],
-  authors: [{ name: "Dra. Gesilane Maurício", url: "https://wa.me/5592981499397" }],
+  authors: [{ name: "Dra. Gesilane Maurício" }],
   openGraph: {
-    title: "Dra. Gesilane Maurício | Psicologia & Desenvolvimento Humano",
-    description: "Promovendo autonomia, comunicação e desenvolvimento saudável com base em afeto e ciência.",
+    title: "Dra. Gesilane Maurício | Psicóloga infantil",
+    description: "Cuidar das emoções também faz parte da infância. Atendimento especializado em desenvolvimento e ABA.",
     type: "website",
     locale: "pt_BR",
   },
@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${cormorant.variable} ${jakarta.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col antialiased selection:bg-[#D2E2D9] selection:text-[#2D4A3E]">
+    <html lang="pt-BR" className={`${cormorant.variable} ${inter.variable} scroll-smooth`}>
+      <body className="min-h-screen flex flex-col antialiased selection:bg-[#E9F0E6] selection:text-[#4C6349]">
         {children}
       </body>
     </html>
