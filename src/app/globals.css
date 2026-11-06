@@ -180,15 +180,19 @@ body {
 .hero-media {
   position: relative;
   width: 100%;
-  aspect-ratio: 1024 / 792;
+  aspect-ratio: 4 / 4.8;
+  max-width: 440px;
+  margin: 0 auto;
+  border-radius: var(--arch);
   overflow: hidden;
+  box-shadow: var(--shadow-soft);
 }
 
 .hero-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
 }
 
 .hero-media::after {
@@ -197,7 +201,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 28%;
+  height: 18%;
   background: linear-gradient(
     to bottom,
     rgba(250, 247, 241, 0) 0%,
@@ -1070,9 +1074,9 @@ footer {
   }
 
   .hero-media {
-    flex: 0 0 50%;
-    max-width: 520px;
-    aspect-ratio: 1024 / 792;
+    flex: 0 0 45%;
+    max-width: 440px;
+    aspect-ratio: 4 / 4.8;
     border-radius: var(--arch);
     box-shadow: var(--shadow-soft);
   }
