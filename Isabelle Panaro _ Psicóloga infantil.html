@@ -1,0 +1,2311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://miny.site/fav-icon.png">
+    <link rel="apple-touch-icon" href="https://miny.site/fav-icon.png">
+    <title>Isabelle Panaro | Psicóloga infantil</title>
+    <meta name="description" content="Psicóloga infantil para crianças de 4 a 12 anos. Psicoterapia para ajudar seu filho a compreender emoções, desenvolver habilidades e enfrentar os desafios da infância.">
+    <meta property="og:title" content="Isabelle Panaro | Psicóloga infantil">
+    <meta property="og:description" content="Cuidar das emoções também faz parte da infância. Atendimento para crianças de 4 a 12 anos.">
+    <meta property="og:image" content="fotos/hero.webp">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FFFFFF;
+            --cream: #FAF7F1;
+            --cream-deep: #F2ECE1;
+            --sage: #8FA88B;
+            --sage-deep: #4C6349;
+            --sage-soft: #E9F0E6;
+            --peach: #E9A87C;
+            --peach-deep: #B0602A;
+            --peach-soft: #FBEDE1;
+            --text: #2B302A;
+            --muted: #5E655C;
+            --line: #E5E1D8;
+            --white: #FFFFFF;
+            --forest: #34432F;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --arch: 220px 220px 22px 22px;
+            --shadow-soft: 0 20px 46px rgba(43, 48, 42, 0.09);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            max-width: 100%;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .isa-page {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.5;
+            overflow-x: hidden;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .isa-page p,
+        .isa-page h1,
+        .isa-page h2,
+        .isa-page h3 {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .isa-page a {
+            text-decoration: none !important;
+            box-shadow: none !important;
+        }
+
+        .isa-page .hero-media img,
+        .isa-page .about-media img,
+        .isa-page .trouble-media img,
+        .isa-page .band-media img {
+            max-width: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 660px;
+            margin: 0 auto;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        /* ——— MOTION ——— */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes nudge {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+
+        .a0, .a1, .a2, .a3, .a4, .a5, .a6 {
+            opacity: 0;
+        }
+
+        .a0.in-view { animation: fadeIn 0.9s ease both; }
+        .a1.in-view { animation: fadeInUp 0.7s ease both 0.08s; }
+        .a2.in-view { animation: fadeInUp 0.7s ease both 0.20s; }
+        .a3.in-view { animation: fadeInUp 0.7s ease both 0.32s; }
+        .a4.in-view { animation: fadeInUp 0.7s ease both 0.44s; }
+        .a5.in-view { animation: fadeInUp 0.7s ease both 0.56s; }
+        .a6.in-view { animation: fadeInUp 0.7s ease both 0.68s; }
+
+        .nudge {
+            animation: nudge 1.6s ease-in-out infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+
+            .a0, .a1, .a2, .a3, .a4, .a5, .a6 {
+                opacity: 1;
+            }
+        }
+
+        /* ——— TIPOGRAFIA COMPARTILHADA ——— */
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.28em;
+            color: var(--sage-deep);
+            font-weight: 500;
+        }
+
+        .eyebrow svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            color: var(--sage);
+        }
+
+        .leaf-rule {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin: 0 auto;
+            max-width: 200px;
+        }
+
+        .leaf-rule span {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--sage));
+        }
+
+        .leaf-rule span:last-child {
+            background: linear-gradient(90deg, var(--sage), transparent);
+        }
+
+        .leaf-rule svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            color: var(--sage);
+        }
+
+        .section {
+            padding: 64px 0;
+        }
+
+        .section-cream {
+            background: var(--cream);
+        }
+
+        .section-head {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-head .eyebrow {
+            margin-bottom: 16px;
+        }
+
+        .section-head h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.85rem, 6.4vw, 2.5rem);
+            font-weight: 500;
+            line-height: 1.18;
+            color: var(--text);
+            max-width: 460px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .section-lead {
+            margin-top: 16px !important;
+            font-size: 15px;
+            line-height: 1.72;
+            color: var(--muted);
+            max-width: 420px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        /* ——— 1. HERO ——— */
+        .hero {
+            position: relative;
+            background:
+                radial-gradient(ellipse 75% 60% at 18% 0%, rgba(143, 168, 139, 0.28), transparent 60%),
+                radial-gradient(ellipse 65% 55% at 100% 40%, rgba(233, 168, 124, 0.24), transparent 58%),
+                var(--cream);
+        }
+
+        .hero-media {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1024 / 792;
+            overflow: hidden;
+        }
+
+        .hero-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .hero-media::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 28%;
+            background: linear-gradient(
+                to bottom,
+                rgba(250, 247, 241, 0) 0%,
+                rgba(250, 247, 241, 0.28) 55%,
+                var(--cream) 100%
+            );
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-copy {
+            display: contents;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-kicker {
+            order: -1;
+        }
+
+        .hero-rest {
+            order: 1;
+        }
+
+        .hero-kicker {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            row-gap: 2px;
+            width: 100%;
+            padding: 18px 24px 10px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            line-height: 1.35;
+            color: var(--sage-deep);
+        }
+
+        .kicker-age {
+            white-space: nowrap;
+        }
+
+        .hero-kicker svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+            color: var(--sage);
+        }
+
+        .hero-rest {
+            margin-top: -16px;
+            padding: 0 24px 28px;
+        }
+
+        .hero-copy h1 {
+            font-family: var(--font-display);
+            font-size: clamp(1.85rem, 7.2vw, 2.7rem);
+            font-weight: 500;
+            line-height: 1.12;
+            color: var(--text);
+            max-width: 12em;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .hero-logo {
+            width: min(210px, 56vw);
+            margin: 0 auto 2px;
+        }
+
+        .hero-logo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-copy .leaf-rule {
+            margin-top: 14px;
+            margin-bottom: 14px;
+        }
+
+        .hero-sub {
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--muted);
+            max-width: 420px;
+            margin: 0 auto !important;
+        }
+
+        .isa-page a.btn,
+        .btn {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: min(100%, 380px);
+            padding: 16px 22px;
+            border-radius: 999px;
+            background: var(--sage-deep);
+            color: #fff !important;
+            font-size: 14.5px;
+            font-weight: 600;
+            line-height: 1.35;
+            text-align: center;
+            box-shadow: 0 14px 30px rgba(52, 67, 47, 0.2);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: #3A4E38;
+        }
+
+        .btn:active {
+            transform: scale(0.985);
+        }
+
+        /* ——— 2. CONECTE-SE COMIGO ——— */
+        .connect {
+            background: var(--cream);
+            padding-bottom: 68px;
+        }
+
+        .connect-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            max-width: 440px;
+            margin: 0 auto;
+        }
+
+        .isa-page a.conn-main,
+        .conn-main {
+            position: relative;
+            display: flex !important;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 22px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, var(--sage-deep) 0%, #3A4E38 100%);
+            color: var(--white) !important;
+            box-shadow: 0 18px 38px rgba(52, 67, 47, 0.32);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .conn-main::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 90% at 100% 0%, rgba(233, 168, 124, 0.35), transparent 70%);
+            pointer-events: none;
+        }
+
+        .conn-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 22px 44px rgba(52, 67, 47, 0.38);
+        }
+
+        .conn-main:active {
+            transform: scale(0.985);
+        }
+
+        .conn-main-icon {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--peach);
+            color: #3A2410;
+            flex-shrink: 0;
+        }
+
+        .conn-main-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .conn-main-copy {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            flex: 1;
+            min-width: 0;
+            text-align: left;
+        }
+
+        .conn-main-title {
+            font-family: var(--font-display);
+            font-size: 19px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .conn-main-sub {
+            font-size: 12px;
+            line-height: 1.3;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .conn-main-chev {
+            position: relative;
+            z-index: 1;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            color: var(--peach);
+        }
+
+        .isa-page a.conn,
+        .conn {
+            display: flex !important;
+            align-items: center;
+            gap: 15px;
+            padding: 16px 20px;
+            border-radius: 999px;
+            background: var(--white);
+            border: 1px solid var(--line);
+            color: var(--text) !important;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .conn:hover {
+            transform: translateY(-2px);
+            border-color: var(--sage);
+            box-shadow: 0 12px 26px rgba(76, 99, 73, 0.12);
+        }
+
+        .conn-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--sage-soft);
+            color: var(--sage-deep);
+            flex-shrink: 0;
+        }
+
+        .conn-icon svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        .conn-copy {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .conn-title {
+            font-size: 14.5px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .conn-sub {
+            font-size: 11.5px;
+            line-height: 1.35;
+            color: var(--muted);
+            word-break: break-word;
+        }
+
+        .conn .chev {
+            width: 17px;
+            height: 17px;
+            flex-shrink: 0;
+            color: var(--sage);
+        }
+
+        /* ——— 3. ENFRENTANDO SUAS DIFICULDADES ——— */
+        .trouble {
+            position: relative;
+            border-radius: 32px;
+            overflow: hidden;
+            max-width: 940px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .trouble-media {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 4.3;
+        }
+
+        .trouble-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+
+        .trouble-media::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(43, 48, 42, 0.88) 0%, rgba(43, 48, 42, 0.42) 46%, rgba(43, 48, 42, 0.06) 72%);
+        }
+
+        .trouble-copy {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            padding: 26px 26px 30px;
+        }
+
+        .ask-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .ask {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 13px 15px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(6px);
+        }
+
+        .ask-dot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--peach);
+            color: #3A2410;
+            flex-shrink: 0;
+        }
+
+        .ask-dot svg {
+            width: 13px;
+            height: 13px;
+        }
+
+        .ask p {
+            font-size: 14.5px;
+            line-height: 1.5;
+            color: #FFFFFF;
+            padding-top: 3px;
+        }
+
+        .ask-close {
+            margin: 22px 0 0 !important;
+            max-width: 480px;
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: clamp(1.05rem, 3.6vw, 1.25rem);
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        /* ——— 4. DESPERTE SEU POTENCIAL ——— */
+        .grow-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .grow {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 18px 20px;
+            border-radius: 20px;
+            background: var(--cream);
+            border: 1px solid var(--line);
+        }
+
+        .grow-check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--sage-soft);
+            color: var(--sage-deep);
+            flex-shrink: 0;
+        }
+
+        .grow:nth-child(2) .grow-check {
+            background: var(--peach-soft);
+            color: var(--peach-deep);
+        }
+
+        .grow:nth-child(4) .grow-check {
+            background: var(--peach-soft);
+            color: var(--peach-deep);
+        }
+
+        .grow-check svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        .grow p {
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        /* ——— 5. DEPOIMENTOS (carrossel infinito) ——— */
+        .say-viewport {
+            overflow: hidden;
+            width: 100%;
+            max-width: 100%;
+            -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+        }
+
+        .say-track {
+            display: flex;
+            gap: 18px;
+            width: max-content;
+            animation: sayScroll 46s linear infinite;
+        }
+
+        .say-viewport:hover .say-track,
+        .say-track.is-paused {
+            animation-play-state: paused;
+        }
+
+        @keyframes sayScroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        .say {
+            position: relative;
+            flex: 0 0 300px;
+            padding: 30px 24px 26px;
+            border-radius: 24px;
+            background: var(--white);
+            border: 1px solid var(--line);
+            box-shadow: 0 14px 34px rgba(43, 48, 42, 0.06);
+        }
+
+        .say-mark {
+            position: absolute;
+            top: 14px;
+            left: 22px;
+            font-family: var(--font-display);
+            font-size: 3rem;
+            line-height: 1;
+            color: var(--sage-soft);
+            pointer-events: none;
+        }
+
+        .say p {
+            position: relative;
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: clamp(1.05rem, 3.6vw, 1.18rem);
+            line-height: 1.52;
+            color: var(--text);
+            min-height: 108px;
+        }
+
+        .say-foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 18px !important;
+            padding-top: 14px;
+            border-top: 1px solid var(--line);
+        }
+
+        .say-name {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .say-name span {
+            display: block;
+            margin-top: 2px;
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--muted);
+        }
+
+        .say-stars {
+            font-size: 10.5px;
+            letter-spacing: 2px;
+            line-height: 1;
+            color: var(--peach-deep);
+            white-space: nowrap;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .say-track {
+                animation: none;
+            }
+        }
+
+        /* ——— 6. CONHEÇA A PSICÓLOGA ——— */
+        .about-section {
+            position: relative;
+            background-color: var(--cream);
+            background-image: url("https://images.pexels.com/photos/1268129/pexels-photo-1268129.jpeg?auto=compress&cs=tinysrgb&w=1600");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(250, 247, 241, 0.94);
+        }
+
+        .about-section > .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-wrap {
+            max-width: 560px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-media {
+            width: min(260px, 68vw);
+            aspect-ratio: 3 / 3.4;
+            margin: 0 auto 32px;
+            border-radius: var(--arch);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .about-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 42%;
+        }
+
+        .about-wrap h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.7rem, 6vw, 2.15rem);
+            font-weight: 500;
+            line-height: 1.2;
+            color: var(--text);
+            margin-bottom: 8px !important;
+        }
+
+        .about-crp {
+            font-size: 10.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: var(--peach-deep);
+            font-weight: 500;
+            margin-bottom: 20px !important;
+        }
+
+        .about-wrap p.about-text {
+            font-size: 15.5px;
+            line-height: 1.8;
+            color: var(--muted);
+            max-width: 470px;
+            margin: 0 auto !important;
+        }
+
+        /* ——— 7. O CAMINHO ——— */
+        .path {
+            position: relative;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .path::before {
+            content: "";
+            position: absolute;
+            left: 21px;
+            top: 26px;
+            bottom: 26px;
+            width: 1px;
+            background: linear-gradient(180deg, var(--sage), var(--peach));
+        }
+
+        .path-step {
+            position: relative;
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 18px;
+            padding: 14px 0;
+        }
+
+        .path-num {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 1px solid var(--sage);
+            color: var(--sage-deep);
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            flex-shrink: 0;
+        }
+
+        .path-step:nth-child(3) .path-num,
+        .path-step:nth-child(4) .path-num {
+            border-color: var(--peach);
+            color: var(--peach-deep);
+        }
+
+        .path-body {
+            padding-top: 6px;
+        }
+
+        .path-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: var(--muted);
+            font-weight: 500;
+            margin-bottom: 5px !important;
+        }
+
+        .path-body h3 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 500;
+            line-height: 1.2;
+            color: var(--text);
+            margin-bottom: 6px !important;
+        }
+
+        .path-body p {
+            font-size: 14px;
+            line-height: 1.62;
+            color: var(--muted);
+        }
+
+        /* ——— 8. OPORTUNIDADE DE MUDANÇA ——— */
+        .offer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .band-media {
+            position: absolute;
+            inset: 0;
+        }
+
+        .band-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .band-media::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(52, 67, 47, 0.93) 0%, rgba(76, 99, 73, 0.88) 100%);
+        }
+
+        .offer-inner {
+            position: relative;
+            z-index: 2;
+            padding: 70px 24px 74px;
+            text-align: center;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .offer-inner .eyebrow {
+            color: var(--peach);
+            margin-bottom: 16px;
+        }
+
+        .offer-inner .eyebrow svg {
+            color: var(--peach);
+        }
+
+        .offer-inner h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.9rem, 6.6vw, 2.5rem);
+            font-weight: 500;
+            line-height: 1.2;
+            color: #FFFFFF;
+        }
+
+        .offer-inner p {
+            margin-top: 18px !important;
+            font-size: 15px;
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.86);
+            max-width: 420px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .isa-page a.offer-btn,
+        .offer-btn {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 11px;
+            margin-top: 32px;
+            padding: 17px 34px;
+            border-radius: 999px;
+            background: var(--peach);
+            color: #3A2410 !important;
+            font-size: 14.5px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .offer-btn:hover {
+            transform: translateY(-2px);
+            background: #F2B98D;
+        }
+
+        .offer-btn:active {
+            transform: scale(0.98);
+        }
+
+        .offer-btn svg {
+            width: 17px;
+            height: 17px;
+        }
+
+
+        /* ——— LOCALIZAÇÃO ——— */
+        .place {
+            background: var(--cream);
+            padding: 72px 0;
+        }
+
+        .place .section-head {
+            margin-bottom: 28px;
+        }
+
+        .place-card {
+            border-radius: 28px;
+            overflow: hidden;
+            background: var(--white);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .place-body {
+            padding: 28px 24px 22px;
+        }
+
+        .place-card h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.55rem, 4vw, 1.9rem);
+            font-weight: 500;
+            color: var(--sage-deep);
+            margin-bottom: 12px !important;
+        }
+
+        .place-address {
+            font-size: 14.5px;
+            color: var(--muted);
+            line-height: 1.85;
+        }
+
+        .place-address strong {
+            display: block;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .map-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 18px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(143, 168, 139, 0.45);
+            background: var(--sage-soft);
+            color: var(--sage-deep);
+            font-size: 13px;
+            font-weight: 600;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .map-link:hover {
+            transform: translateY(-2px);
+            background: #DDE8DA;
+        }
+
+        .map-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .place-online {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid var(--line);
+        }
+
+        .place-online-icon {
+            display: grid;
+            place-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--peach-soft);
+            color: var(--peach-deep);
+            flex-shrink: 0;
+        }
+
+        .place-online-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .place-online p {
+            font-size: 13.5px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .place-online strong {
+            display: block;
+            color: var(--text);
+            font-size: 14.5px;
+            margin-bottom: 2px;
+        }
+
+        .place-map {
+            border-top: 1px solid var(--line);
+            background: var(--cream-deep);
+            min-height: 280px;
+        }
+
+        .place-map iframe {
+            display: block;
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        /* ——— 9. FIQUE POR DENTRO / RODAPÉ ——— */
+        footer {
+            background: var(--forest);
+        }
+
+        .footer-inner {
+            padding: 56px 24px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 22px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            width: 150px;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: auto;
+            filter: brightness(0) invert(1);
+            opacity: 0.92;
+        }
+
+        .footer-lead {
+            font-size: 14px;
+            line-height: 1.72;
+            color: rgba(255, 255, 255, 0.74);
+            max-width: 360px;
+        }
+
+        .footer-rule {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        .footer-rule span {
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        .footer-rule svg {
+            width: 15px;
+            height: 15px;
+            color: var(--peach);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 13px;
+        }
+
+        .footer-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.07);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            transition: background 0.2s ease, transform 0.15s ease;
+        }
+
+        .footer-socials a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .footer-socials a:active {
+            transform: scale(0.95);
+        }
+
+        .footer-socials svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .footer-contact {
+            font-size: 12.5px;
+            line-height: 1.95;
+            color: rgba(255, 255, 255, 0.62);
+        }
+
+        .footer-contact a:hover {
+            color: #FFFFFF;
+        }
+
+        .footer-copy {
+            font-size: 10.5px;
+            letter-spacing: 0.05em;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .footer-miny {
+            width: 100%;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.22);
+        }
+
+        .footer-miny a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11.5px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.34);
+            transition: color 0.2s ease;
+        }
+
+        .footer-miny a:hover {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-miny .heart {
+            width: 13px;
+            height: 13px;
+            color: var(--peach);
+            flex-shrink: 0;
+        }
+
+        /* ——— SINAIS DO DIA A DIA ——— */
+        .sign-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .sign {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px 16px;
+            border-radius: 16px;
+            background: var(--cream);
+            border: 1px solid var(--line);
+        }
+
+        .sign-mark {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--sage-soft);
+            color: var(--sage-deep);
+            flex-shrink: 0;
+        }
+
+        .sign-mark svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .sign p {
+            font-size: 14.5px;
+            line-height: 1.45;
+            color: var(--text);
+            padding-top: 2px;
+        }
+
+        .close-note {
+            margin: 28px auto 0 !important;
+            max-width: 560px;
+            text-align: center;
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: clamp(1.15rem, 3.4vw, 1.45rem);
+            line-height: 1.45;
+            color: var(--sage-deep);
+        }
+
+        .section-lead.wide {
+            max-width: 560px;
+        }
+
+        /* ——— COMO POSSO AJUDAR ——— */
+        .help-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        .help {
+            padding: 22px 20px 20px;
+            border-radius: 22px;
+            background: var(--white);
+            border: 1px solid var(--line);
+        }
+
+        .help-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--sage-soft);
+            color: var(--sage-deep);
+        }
+
+        .help:nth-child(2) .help-icon,
+        .help:nth-child(5) .help-icon {
+            background: var(--peach-soft);
+            color: var(--peach-deep);
+        }
+
+        .help-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .help h3 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 500;
+            line-height: 1.2;
+            color: var(--text);
+            margin-top: 14px !important;
+            margin-bottom: 6px !important;
+        }
+
+        .help p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--muted);
+        }
+
+        /* ——— DÚVIDA ——— */
+        .doubt {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 36px 24px 32px;
+            border-radius: 32px;
+            background:
+                radial-gradient(ellipse 80% 80% at 100% 0%, rgba(233, 168, 124, 0.28), transparent 55%),
+                var(--cream);
+            border: 1px solid var(--line);
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .doubt .eyebrow {
+            margin-bottom: 14px;
+        }
+
+        .doubt h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.85rem, 6vw, 2.45rem);
+            font-weight: 500;
+            line-height: 1.18;
+            color: var(--text);
+            max-width: 14em;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .doubt p {
+            margin-top: 16px !important;
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--muted);
+            max-width: 520px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .doubt .btn {
+            margin-top: 26px;
+        }
+
+        /* ——— LÚDICO + RECURSOS ——— */
+        .shot-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            max-width: 980px;
+            margin: 8px auto 0;
+        }
+
+        .shot {
+            margin: 0;
+        }
+
+        .shot-frame {
+            border-radius: 22px;
+            overflow: hidden;
+            aspect-ratio: 4 / 5;
+            background: var(--cream-deep);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .shot-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .shot-books {
+            object-position: center 78%;
+        }
+
+        .shot figcaption {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            color: var(--sage-deep);
+            text-align: center;
+        }
+
+        /* ——— PAIS + SOBRE ——— */
+        .about-work {
+            margin-top: 26px !important;
+            font-family: var(--font-display);
+            font-size: 1.45rem;
+            font-weight: 500;
+            line-height: 1.2;
+            color: var(--text);
+        }
+
+        .about-text + .about-text,
+        .about-work + .about-text {
+            margin-top: 14px !important;
+        }
+
+        .about-note {
+            margin-top: 18px !important;
+            font-size: 14.5px;
+            line-height: 1.65;
+            font-weight: 600;
+            color: var(--sage-deep);
+            max-width: 470px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        /* ——— TABLET ——— */
+        @media (min-width: 640px) {
+            .container {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+
+            .hero-sub {
+                font-size: 16px;
+            }
+
+            .sign-list,
+            .help-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .shot-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .connect-stack {
+                max-width: 480px;
+            }
+
+            .trouble-media {
+                aspect-ratio: 16 / 9;
+            }
+
+            .trouble-copy {
+                padding: 36px 40px;
+            }
+
+            .grow-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-media {
+                width: 290px;
+            }
+
+            .offer-inner {
+                padding: 86px 32px 90px;
+            }
+        }
+
+        /* ——— DESKTOP ——— */
+        @media (min-width: 960px) {
+            .container {
+                max-width: 1060px;
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .section {
+                padding: 96px 0;
+            }
+
+            .section-head {
+                margin-bottom: 52px;
+            }
+
+            .hero {
+                padding: 70px 0 0;
+                background:
+                    radial-gradient(ellipse 60% 70% at 88% 15%, rgba(143, 168, 139, 0.20), transparent 58%),
+                    radial-gradient(ellipse 55% 60% at 8% 82%, rgba(233, 168, 124, 0.22), transparent 55%),
+                    var(--cream);
+            }
+
+            .hero-inner {
+                flex-direction: row-reverse;
+                align-items: center;
+                gap: 60px;
+                max-width: 1060px;
+                margin: 0 auto;
+                padding: 0 40px 20px;
+            }
+
+            .hero-media {
+                flex: 0 0 50%;
+                max-width: 520px;
+                aspect-ratio: 1024 / 792;
+                border-radius: var(--arch);
+                box-shadow: var(--shadow-soft);
+            }
+
+            .hero-media::after {
+                display: none;
+            }
+
+            .hero-copy {
+                display: block;
+                flex: 1;
+                margin-top: 0;
+                padding: 0;
+                text-align: left;
+            }
+
+            .hero-kicker {
+                order: 0;
+                width: auto;
+                justify-content: flex-start;
+                padding: 0 0 16px;
+            }
+
+            .hero-rest {
+                order: 0;
+                margin-top: 0;
+                padding: 0;
+            }
+
+            .hero-logo {
+                width: 188px;
+                margin: 0 0 8px;
+            }
+
+            .hero-copy h1 {
+                font-size: 3.15rem;
+                max-width: 11em;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            .hero-copy .leaf-rule {
+                margin-left: 0;
+                margin-right: 0;
+                max-width: 180px;
+            }
+
+            .hero-sub {
+                margin: 0 !important;
+                max-width: 460px;
+                font-size: 17px;
+            }
+
+            .help-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .about-note {
+                margin-left: 0 !important;
+            }
+
+            .connect {
+                padding-bottom: 96px;
+            }
+
+            .connect-stack {
+                max-width: 520px;
+            }
+
+            .place {
+                padding: 96px 0;
+            }
+
+            .place-map iframe {
+                height: 340px;
+            }
+
+            .trouble-media {
+                aspect-ratio: 21 / 9;
+            }
+
+            .trouble-copy {
+                padding: 44px 52px 48px;
+                max-width: 640px;
+            }
+
+            .ask-list {
+                flex-direction: row;
+            }
+
+            .ask {
+                flex: 1;
+            }
+
+            .grow-grid {
+                max-width: 880px;
+                gap: 14px;
+            }
+
+            .say {
+                flex-basis: 340px;
+            }
+
+            .about-wrap {
+                display: grid;
+                grid-template-columns: 0.8fr 1.2fr;
+                gap: 60px;
+                align-items: center;
+                max-width: 940px;
+                text-align: left;
+            }
+
+            .about-media {
+                width: 100%;
+                max-width: 330px;
+                margin: 0;
+            }
+
+            .about-wrap p.about-text {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                font-size: 16px;
+            }
+
+            .path {
+                max-width: 640px;
+            }
+
+            .offer-inner {
+                padding: 110px 40px 114px;
+                max-width: 620px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="isa-page">
+
+    <!-- ═══ 1. HERO ═══ -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-media a0">
+                <img
+                    src="fotos/hero.webp"
+                    alt="Isabelle Panaro desenhando e sorrindo em um ambiente infantil"
+                    width="1024"
+                    height="792"
+                >
+            </div>
+
+            <div class="hero-copy">
+                <p class="hero-kicker a1">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                        <path stroke-linecap="round" d="M4 20c4-4 8-7 13-9"/>
+                    </svg>
+                    <span>Psicóloga infantil</span>
+                    <span class="kicker-age">· Crianças de 4 a 12 anos</span>
+                </p>
+
+                <div class="hero-rest">
+                    <div class="hero-logo a1">
+                        <img
+                            src="fotos/local.webp"
+                            alt="Isabelle Panaro — Psicóloga, CRP 06/220051"
+                            width="500"
+                            height="500"
+                        >
+                    </div>
+
+                    <h1 class="a2">Cuidar das emoções também faz parte da infância.</h1>
+
+                    <div class="leaf-rule a3">
+                        <span></span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                            <path stroke-linecap="round" d="M4 20c4-4 8-7 13-9"/>
+                        </svg>
+                        <span></span>
+                    </div>
+
+                    <p class="hero-sub a4">
+                        Psicoterapia infantil para ajudar seu filho a compreender suas emoções, desenvolver habilidades e enfrentar os desafios da infância.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 2. CONECTE-SE COMIGO ═══ -->
+    <section class="connect">
+        <div class="container">
+            <div class="connect-stack a2">
+                <a
+                    class="conn-main"
+                    href="https://wa.me/5517996077078?text=Ol%C3%A1%2C%20Isabelle!%20Gostaria%20de%20conversar%20sobre%20o%20atendimento%20do%20meu%20filho."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span class="conn-main-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </span>
+                    <span class="conn-main-copy">
+                        <span class="conn-main-title">Quero conversar sobre meu filho</span>
+                        <span class="conn-main-sub">Fale comigo pelo WhatsApp</span>
+                    </span>
+                    <svg class="conn-main-chev nudge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+
+                <a
+                    class="conn"
+                    href="https://www.instagram.com/psi.isabellebraga/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span class="conn-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <rect x="2.5" y="2.5" width="19" height="19" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </span>
+                    <span class="conn-copy">
+                        <span class="conn-title">Instagram</span>
+                        <span class="conn-sub">@psi.isabellebraga</span>
+                    </span>
+                    <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+
+                <a class="conn" href="mailto:psi.isabellepanaro@gmail.com">
+                    <span class="conn-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </span>
+                    <span class="conn-copy">
+                        <span class="conn-title">E-mail</span>
+                        <span class="conn-sub">psi.isabellepanaro@gmail.com</span>
+                    </span>
+                    <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 3. SINAIS DO DIA A DIA ═══ -->
+    <section class="section" id="sinais">
+        <div class="container">
+            <div class="section-head a1">
+                <p class="eyebrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                    </svg>
+                    No dia a dia
+                </p>
+                <h2>Nem sempre uma criança consegue dizer o que está sentindo.</h2>
+                <p class="section-lead wide">Seu filho tem apresentado…</p>
+            </div>
+
+            <div class="sign-list">
+                <div class="sign a2">
+                    <span class="sign-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7.5"/></svg></span>
+                    <p>Mudanças repentinas de comportamento?</p>
+                </div>
+                <div class="sign a2">
+                    <span class="sign-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7.5"/></svg></span>
+                    <p>Dificuldade para lidar com frustrações?</p>
+                </div>
+                <div class="sign a2">
+                    <span class="sign-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7.5"/></svg></span>
+                    <p>Crises de choro ou irritação frequentes?</p>
+                </div>
+                <div class="sign a3">
+                    <span class="sign-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7.5"/></svg></span>
+                    <p>Medo ou preocupação excessiva?</p>
+                </div>
+                <div class="sign a3">
+                    <span class="sign-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7.5"/></svg></span>
+                    <p>Dificuldade para fazer amigos?</p>
+                </div>
+                <div class="sign a3">
+                    <span class="sign-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7.5"/></svg></span>
+                    <p>Baixa autoestima?</p>
+                </div>
+                <div class="sign a4">
+                    <span class="sign-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7.5"/></svg></span>
+                    <p>Dificuldades de atenção e organização?</p>
+                </div>
+                <div class="sign a4">
+                    <span class="sign-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7.5"/></svg></span>
+                    <p>Resistência para ir à escola?</p>
+                </div>
+                <div class="sign a4">
+                    <span class="sign-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7.5"/></svg></span>
+                    <p>Dificuldade para expressar o que sente?</p>
+                </div>
+            </div>
+
+            <p class="close-note a5">A terapia pode ser um espaço para compreender o que está por trás desses comportamentos e ajudar a criança a desenvolver novas formas de lidar com suas emoções.</p>
+        </div>
+    </section>
+
+    <!-- ═══ 4. COMO EU POSSO AJUDAR ═══ -->
+    <section class="section section-cream" id="atendimento">
+        <div class="container">
+            <div class="section-head a1">
+                <p class="eyebrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                    </svg>
+                    Como eu posso ajudar
+                </p>
+                <h2>Cada criança tem seu jeito de sentir, pensar e se expressar.</h2>
+                <p class="section-lead wide">Na terapia infantil, podemos trabalhar:</p>
+            </div>
+
+            <div class="help-grid">
+                <article class="help a2">
+                    <span class="help-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 20s-7-4.4-7-9.2A4 4 0 0112 8a4 4 0 017 2.8C19 15.6 12 20 12 20z"/></svg>
+                    </span>
+                    <h3>Emoções</h3>
+                    <p>Reconhecer, compreender e expressar sentimentos.</p>
+                </article>
+                <article class="help a2">
+                    <span class="help-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" d="M12 21V10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14c-4 0-7-2.2-7-6 4.2 0 7 1.2 7 4"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 12c4 0 7-2 7-5.5-4.2 0-7 1-7 3.8"/></svg>
+                    </span>
+                    <h3>Autonomia e autoestima</h3>
+                    <p>Desenvolver confiança e percepção sobre suas próprias capacidades.</p>
+                </article>
+                <article class="help a3">
+                    <span class="help-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" d="M4 8.5h10.5a3 3 0 100-5"/><path stroke-linecap="round" d="M4 15.5h14a3 3 0 110 5"/><path stroke-linecap="round" d="M4 12h8"/></svg>
+                    </span>
+                    <h3>Regulação emocional</h3>
+                    <p>Aprender estratégias para lidar com raiva, frustração, medo e ansiedade.</p>
+                </article>
+                <article class="help a3">
+                    <span class="help-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="9" r="2.4"/><circle cx="16" cy="10" r="2"/><path stroke-linecap="round" d="M3.5 19c.4-2.8 2.2-4.4 4.5-4.4s4.1 1.6 4.5 4.4"/><path stroke-linecap="round" d="M13.5 18.6c.4-2 1.6-3.4 3.5-3.6"/></svg>
+                    </span>
+                    <h3>Habilidades sociais</h3>
+                    <p>Auxiliar na construção de relações e resolução de conflitos.</p>
+                </article>
+                <article class="help a4">
+                    <span class="help-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 016.5 3H20v16H6.5A2.5 2.5 0 004 21.5z"/><path stroke-linecap="round" d="M4 5.5A2.5 2.5 0 016.5 8H20"/></svg>
+                    </span>
+                    <h3>Desafios escolares</h3>
+                    <p>Trabalhar aspectos emocionais relacionados à escola, rotina, organização e aprendizagem.</p>
+                </article>
+                <article class="help a4">
+                    <span class="help-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4 11.5L12 4l8 7.5V20a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1z"/></svg>
+                    </span>
+                    <h3>Mudanças familiares</h3>
+                    <p>Ajudar a criança a lidar com mudanças, separações, chegada de irmãos e outras situações que podem impactá-la.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 5. PRECISA DE TERAPIA? ═══ -->
+    <section class="section" id="duvida">
+        <div class="container">
+            <div class="doubt a2">
+                <p class="eyebrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                    </svg>
+                    Uma dúvida comum
+                </p>
+                <h2>Mas meu filho realmente precisa de terapia?</h2>
+                <p>Nem todo comportamento difícil significa que existe um transtorno. Às vezes, a criança está tentando comunicar algo que ainda não consegue colocar em palavras.</p>
+                <p>A avaliação psicológica ajuda a compreender o que está acontecendo e identificar quais estratégias podem contribuir para o desenvolvimento emocional da criança.</p>
+                <a
+                    class="btn"
+                    href="https://wa.me/5517996077078?text=Ol%C3%A1%2C%20Isabelle!%20Gostaria%20de%20conversar%20sobre%20o%20atendimento%20do%20meu%20filho."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Quero conversar sobre meu filho</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 6. COMO FUNCIONA ═══ -->
+    <section class="section section-cream" id="caminho">
+        <div class="container">
+            <div class="section-head a1">
+                <p class="eyebrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                    </svg>
+                    Como funciona
+                </p>
+                <h2>Como funciona o acompanhamento?</h2>
+            </div>
+
+            <div class="path">
+                <div class="path-step a2">
+                    <span class="path-num" aria-hidden="true">01</span>
+                    <div class="path-body">
+                        <h3>Conhecer</h3>
+                        <p>Primeiro, conversamos com os responsáveis para conhecer a história e as principais dificuldades percebidas.</p>
+                    </div>
+                </div>
+                <div class="path-step a3">
+                    <span class="path-num" aria-hidden="true">02</span>
+                    <div class="path-body">
+                        <h3>Criar vínculo</h3>
+                        <p>Com a criança, construímos um espaço seguro e acolhedor, respeitando sua idade e seu jeito de se comunicar.</p>
+                    </div>
+                </div>
+                <div class="path-step a4">
+                    <span class="path-num" aria-hidden="true">03</span>
+                    <div class="path-body">
+                        <h3>Trabalhar através do lúdico</h3>
+                        <p>Utilizamos brincadeiras, jogos, desenhos, histórias e outros recursos terapêuticos adequados à faixa etária.</p>
+                    </div>
+                </div>
+                <div class="path-step a5">
+                    <span class="path-num" aria-hidden="true">04</span>
+                    <div class="path-body">
+                        <h3>Desenvolver habilidades</h3>
+                        <p>A criança aprende estratégias para compreender emoções, resolver problemas e lidar melhor com os desafios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 7. NÃO É APENAS BRINCAR ═══ -->
+    <section class="section" id="ludico">
+        <div class="container">
+            <div class="section-head a1">
+                <p class="eyebrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                    </svg>
+                    A abordagem
+                </p>
+                <h2>Terapia infantil não é apenas brincar.</h2>
+                <p class="section-lead wide">O brincar é uma das formas pelas quais a criança se comunica e aprende. Na psicoterapia infantil, utilizamos recursos lúdicos de maneira intencional, dentro de objetivos terapêuticos, para facilitar a expressão, a compreensão e o desenvolvimento de habilidades.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 8. RECURSOS ═══ -->
+    <section class="section section-cream" id="recursos">
+        <div class="container">
+            <div class="section-head a1">
+                <p class="eyebrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                    </svg>
+                    Recursos terapêuticos
+                </p>
+                <h2>Um jeito de falar a língua da criança</h2>
+            </div>
+
+            <div class="shot-grid">
+                <figure class="shot a2">
+                    <div class="shot-frame">
+                        <img src="fotos/recurso-desenho.webp" alt="Criança desenhando com caneta em uma folha, ao lado de um pote de canetinhas" width="736" height="949" loading="lazy">
+                    </div>
+                    <figcaption>Desenho e expressão</figcaption>
+                </figure>
+                <figure class="shot a3">
+                    <div class="shot-frame">
+                        <img src="fotos/recurso-brincar.webp" alt="Brinquedos de madeira, blocos e jogos espalhados em um tapete de brincar" width="682" height="1024" loading="lazy">
+                    </div>
+                    <figcaption>Brincar com propósito</figcaption>
+                </figure>
+                <figure class="shot a4">
+                    <div class="shot-frame">
+                        <img class="shot-books" src="fotos/recurso-livros.webp" alt="Livros infantis sobre emoções, Quando Estou Triste e Quando Me Sinto Bem" width="768" height="1024" loading="lazy">
+                    </div>
+                    <figcaption>Histórias sobre o que se sente</figcaption>
+                </figure>
+            </div>
+
+            <p class="close-note a5">Na infância, muitas coisas que ainda não conseguem ser ditas podem aparecer através do brincar.</p>
+        </div>
+    </section>
+
+    <!-- ═══ 9. CONHEÇA A PSICÓLOGA ═══ -->
+    <section class="section about-section" id="sobre">
+        <div class="container">
+            <div class="about-wrap">
+                <div class="about-media a0">
+                    <img
+                        src="fotos/sobre.webp"
+                        alt="Isabelle Panaro Braga da Rosa, psicóloga"
+                        width="1024"
+                        height="994"
+                    >
+                </div>
+
+                <div>
+                    <p class="eyebrow a1">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                        </svg>
+                        Conheça a psicóloga
+                    </p>
+                    <h2 class="a2">Isabelle Panaro Braga da Rosa</h2>
+                    <p class="about-crp a2">CRP 06/220051</p>
+                    <p class="about-text a3">Meu trabalho é baseado na Terapia Cognitivo-Comportamental (TCC), buscando compreender a relação entre pensamentos, emoções e comportamentos e desenvolver, junto ao paciente, estratégias mais saudáveis para lidar com os desafios do dia a dia.</p>
+                    <h3 class="about-work a4">Meu trabalho com crianças</h3>
+                    <p class="about-text a4">Na infância, cada comportamento comunica algo. Por isso, meu objetivo é oferecer um espaço seguro, acolhedor e leve, onde a criança possa brincar, se expressar, compreender suas emoções e desenvolver novas habilidades.</p>
+                    <p class="about-text a5">O atendimento é voltado para crianças de 4 a 12 anos, com participação e orientação dos responsáveis ao longo do processo, fortalecendo também a família e o desenvolvimento da criança.</p>
+                    <p class="about-note a5">Acredito que cuidar da saúde emocional desde cedo é ajudar a criança a construir recursos para a vida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 10. OS PAIS ═══ -->
+    <section class="section" id="pais">
+        <div class="container">
+            <div class="section-head a1">
+                <p class="eyebrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                    </svg>
+                    Para os pais
+                </p>
+                <h2>Os pais também fazem parte desse processo.</h2>
+                <p class="section-lead wide">O acompanhamento infantil não acontece apenas dentro da sessão. A participação dos responsáveis é importante para compreender o contexto da criança e favorecer que as habilidades trabalhadas na terapia também façam parte da rotina.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 11. CTA FINAL ═══ -->
+    <section class="offer" id="agendar">
+        <div class="band-media" aria-hidden="true">
+            <img
+                src="fotos/recurso-brincar.webp"
+                alt=""
+                width="682"
+                height="1024"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="offer-inner">
+            <p class="eyebrow a1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                </svg>
+                Próximo passo
+            </p>
+            <h2 class="a2">Você não precisa descobrir sozinho como ajudar seu filho.</h2>
+            <p class="a3">Vamos conversar sobre o que está acontecendo?</p>
+
+            <a
+                class="offer-btn a4"
+                href="https://wa.me/5517996077078?text=Ol%C3%A1%2C%20Isabelle!%20Gostaria%20de%20conversar%20sobre%20o%20atendimento%20do%20meu%20filho."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Agendar uma conversa
+                <svg class="nudge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- ═══ LOCALIZAÇÃO ═══ -->
+    <section class="place" id="local">
+        <div class="container">
+            <div class="section-head a1">
+                <p class="eyebrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                    </svg>
+                    Contato e localização
+                </p>
+                <h2>Onde o cuidado acontece.</h2>
+            </div>
+
+            <div class="place-card a2">
+                <div class="place-body">
+                    <h3>Giorgina Business Park</h3>
+                    <p class="place-address">
+                        <strong>Av. Anísio Haddad, 8001</strong>
+                        Sala 501, Torre Milan Norte<br>
+                        Jardim Vivendas<br>
+                        São José do Rio Preto — SP
+                    </p>
+                    <a
+                        class="map-link"
+                        href="https://www.google.com/maps/search/?api=1&query=Giorgina+Business+Park+Av.+An%C3%ADsio+Haddad+8001+S%C3%A3o+Jos%C3%A9+do+Rio+Preto"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                            <path d="M12 21s7-5.8 7-12a7 7 0 1 0-14 0c0 6.2 7 12 7 12Z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Abrir no Google Maps
+                    </a>
+                    <div class="place-online">
+                        <span class="place-online-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+                            </svg>
+                        </span>
+                        <p>
+                            <strong>Atendimento online também</strong>
+                            Consultas à distância, de onde você estiver.
+                        </p>
+                    </div>
+                </div>
+                <div class="place-map">
+                    <iframe
+                        title="Localização — Giorgina Business Park"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps?q=Giorgina+Business+Park,+Av.+An%C3%ADsio+Haddad,+8001,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP&output=embed"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══ 9. FIQUE POR DENTRO / RODAPÉ ═══ -->
+    <footer id="contato">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img
+                    src="fotos/local.webp"
+                    alt="Isabelle Panaro — Psicóloga"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                >
+            </div>
+
+            <p class="footer-lead">Psicoterapia infantil para crianças de 4 a 12 anos, com acompanhamento dos responsáveis.</p>
+
+            <div class="footer-rule" aria-hidden="true">
+                <span></span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z"/>
+                </svg>
+                <span></span>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://wa.me/5517996077078?text=Ol%C3%A1%2C%20Isabelle!%20Gostaria%20de%20conversar%20sobre%20o%20atendimento%20do%20meu%20filho." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/psi.isabellebraga/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <rect x="2.5" y="2.5" width="19" height="19" rx="5"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/>
+                    </svg>
+                </a>
+                <a href="mailto:psi.isabellepanaro@gmail.com" aria-label="E-mail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <p class="footer-contact">
+                <a href="https://www.instagram.com/psi.isabellebraga/" target="_blank" rel="noopener noreferrer">@psi.isabellebraga</a><br>
+                <a href="mailto:psi.isabellepanaro@gmail.com">psi.isabellepanaro@gmail.com</a><br>
+                <a href="https://wa.me/5517996077078?text=Ol%C3%A1%2C%20Isabelle!%20Gostaria%20de%20conversar%20sobre%20o%20atendimento%20do%20meu%20filho." target="_blank" rel="noopener noreferrer">(17) 99607-7078</a>
+            </p>
+
+            <p class="footer-copy">© 2026 Isabelle Panaro · Psicóloga infantil · CRP 06/220051</p>
+        </div>
+
+        <div class="footer-miny">
+            <a href="https://app.miny.site" target="_blank" rel="noopener noreferrer">
+                Feito com
+                <svg class="heart" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 21s-7.5-4.5-10-9.2C.4 8.7 2 5 5.6 5 8 5 9.7 6.4 12 9c2.3-2.6 4-4 6.4-4 3.6 0 5.2 3.7 3.6 6.8C19.5 16.5 12 21 12 21z"/>
+                </svg>
+                miny.site
+            </a>
+        </div>
+    </footer>
+
+</div>
+
+    <script>
+        (function () {
+            var root = document.querySelector('.isa-page') || document;
+            var targets = root.querySelectorAll('.a0, .a1, .a2, .a3, .a4, .a5, .a6');
+            if (!targets.length) return;
+
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+                targets.forEach(function (el) { el.classList.add('in-view'); });
+                return;
+            }
+
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -48px 0px'
+            });
+
+            targets.forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
+
+</body>
+</html>

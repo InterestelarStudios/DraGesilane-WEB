@@ -1,35 +1,38 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-display",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Dra. Gesilane Maurício | Psicóloga, Assistente Terapêutica ABA e Mediadora Escolar",
+  title: "Dra. Gesilane Maurício | Psicóloga Clínica, Terapeuta ABA e Mediadora Escolar",
   description:
-    "Atendimento psicológico clínico especializado, Assistência Terapêutica em ABA para TEA e Desenvolvimento Atípico, e Mediação Escolar Inclusiva com a Dra. Gesilane Maurício.",
+    "Atendimento psicológico clínico especializado, Assistência Terapêutica em ABA e Mediação Escolar Inclusiva com a Dra. Gesilane Maurício (CRP 20/14363). Cuidado humanizado e baseado em evidências.",
   keywords: [
+    "Dra. Gesilane Maurício",
     "Psicóloga Gesilane Maurício",
-    "Psicologia Infantil",
+    "CRP 20/14363",
+    "Psicologia Infantil Manaus",
     "Assistente Terapêutica ABA",
-    "Terapia ABA",
-    "Mediadora Escolar",
-    "Autismo TEA",
-    "Educação Inclusiva",
-    "Psicoterapia Clínica"
+    "Mediação Escolar TEA",
+    "Análise do Comportamento Aplicada",
+    "Autismo Manaus"
   ],
-  authors: [{ name: "Dra. Gesilane Maurício" }],
+  authors: [{ name: "Dra. Gesilane Maurício", url: "https://wa.me/5592981499397" }],
   openGraph: {
-    title: "Dra. Gesilane Maurício | Psicologia & Desenvolvimento Infantil",
-    description: "Cuidado humanizado, ciência do comportamento e inclusão escolar.",
+    title: "Dra. Gesilane Maurício | Psicologia & Desenvolvimento Humano",
+    description: "Promovendo autonomia, comunicação e desenvolvimento saudável com base em afeto e ciência.",
     type: "website",
     locale: "pt_BR",
   },
@@ -41,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col antialiased selection:bg-teal-100 selection:text-teal-900">
+    <html lang="pt-BR" className={`${cormorant.variable} ${jakarta.variable} scroll-smooth`}>
+      <body className="min-h-screen flex flex-col antialiased selection:bg-[#D1E3EC] selection:text-[#16425B]">
         {children}
       </body>
     </html>

@@ -1,23 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f9fc;
-  --foreground: #1e293b;
+  --bg: #FFFFFF;
+  --sand: #F8F9FA;
+  --sand-warm: #F1F4F6;
+  
+  /* Azul Oceano / Atlântico Profundo & Acolhedor */
+  --ocean-deep: #16425B;
+  --ocean: #2F6690;
+  --ocean-soft: #E8F1F5;
+  --ocean-border: #D1E3EC;
+  
+  /* Toques suaves de Âmbar/Dourado Sereno */
+  --amber-soft: #FAF3E0;
+  --amber-deep: #B58327;
+  
+  --text: #1F2937;
+  --muted: #4B5563;
+  --line: #E2E8F0;
+  --white: #FFFFFF;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), system-ui, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-::selection {
-  background-color: #dbeafe;
-  color: #1e40af;
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.arch-media {
+  border-radius: 180px 180px 28px 28px;
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+.nudge {
+  animation: nudge 1.6s ease-in-out infinite;
 }

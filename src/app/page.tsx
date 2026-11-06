@@ -1,535 +1,585 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  MessageCircle,
+  Mail,
+  ChevronRight,
+  Sparkles,
   Brain,
   GraduationCap,
-  Sparkles,
-  MessageCircle,
-  Menu,
-  X,
+  HeartHandshake,
+  CheckCircle2,
+  Compass,
   ArrowRight,
-  ChevronDown,
-  Heart,
-  Mail,
-  Phone
+  Smile,
+  Users
 } from "lucide-react";
 
 export default function Home() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  // Contatos Oficiais
+  const crp = "CRP 20/14363";
   const whatsappNumber = "5592981499397";
-  const whatsappDisplay = "+55 (92) 98149-9397";
+  const whatsappDisplay = "(92) 98149-9397";
   const emailAddress = "psigeisenm13@gmail.com";
-  
+
   const defaultWhatsAppMsg = encodeURIComponent(
-    "Olá, Dra. Gesilane! Gostaria de informações sobre atendimento e agendamento."
+    "Olá, Dra. Gesilane! Gostaria de mais informações sobre atendimentos e agendamento de consulta/avaliação."
   );
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${defaultWhatsAppMsg}`;
-  const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent("Contato via Site - Atendimento Psicológico")}`;
-
-  const toggleFaq = (idx: number) => {
-    setOpenFaq(openFaq === idx ? null : idx);
-  };
+  const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
+    "Contato via Site - Dra. Gesilane Maurício"
+  )}`;
 
   return (
-    <div className="min-h-screen bg-[#F7F9FC] text-slate-800 flex flex-col font-sans selection:bg-sky-100 selection:text-sky-900">
-      {/* ================= HEADER ================= */}
-      <header className="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b border-sky-100/80">
-        <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link href="#inicio" className="flex items-center gap-3">
-            <span className="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center font-bold text-sm shadow-sm shadow-sky-500/20">
-              G
-            </span>
-            <div className="leading-tight">
-              <span className="text-base font-semibold tracking-tight text-slate-900 block">
-                Dra. Gesilane Maurício
-              </span>
-              <span className="text-xs text-sky-700 font-medium">
-                Psicóloga & Desenvolvimento Infantil
-              </span>
-            </div>
-          </Link>
+    <div className="w-full bg-[#FFFFFF] text-[#1F2937] overflow-x-hidden font-sans">
+      {/* ═══ 1. HERO - ELEGÂNCIA EM AZUL OCEANO & CLARIDADE ═══ */}
+      <section className="relative bg-gradient-to-b from-[#F0F5F9] via-[#F8FAFC] to-[#FFFFFF] pt-8 md:pt-16 pb-14 md:pb-20 overflow-hidden border-b border-[#E2E8F0]">
+        {/* Soft background glow */}
+        <div className="absolute top-0 right-10 w-[480px] h-[480px] bg-[#2F6690]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 left-10 w-[420px] h-[420px] bg-[#16425B]/8 rounded-full blur-3xl pointer-events-none" />
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8 text-sm text-slate-600 font-medium">
-            <Link href="#sobre" className="hover:text-sky-600 transition-colors">
-              Sobre
-            </Link>
-            <Link href="#atuacao" className="hover:text-sky-600 transition-colors">
-              Atuação
-            </Link>
-            <Link href="#metodo" className="hover:text-sky-600 transition-colors">
-              Metodologia ABA
-            </Link>
-            <Link href="#duvidas" className="hover:text-sky-600 transition-colors">
-              Dúvidas
-            </Link>
-          </nav>
-
-          {/* Action */}
-          <div className="hidden md:block">
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-xs font-semibold tracking-wide transition-all shadow-sm shadow-sky-500/25 hover:shadow-sky-500/35 active:scale-95"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Agendar Consulta</span>
-            </a>
-          </div>
-
-          {/* Mobile button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-slate-600 hover:text-sky-600"
-            aria-label="Menu"
-          >
-            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
-        </div>
-
-        {/* Mobile dropdown */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-b border-sky-100 px-6 py-6 space-y-4">
-            <Link
-              href="#sobre"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-slate-700 text-sm font-medium hover:text-sky-600"
-            >
-              Sobre
-            </Link>
-            <Link
-              href="#atuacao"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-slate-700 text-sm font-medium hover:text-sky-600"
-            >
-              Atuação
-            </Link>
-            <Link
-              href="#metodo"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-slate-700 text-sm font-medium hover:text-sky-600"
-            >
-              Metodologia ABA
-            </Link>
-            <Link
-              href="#duvidas"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-slate-700 text-sm font-medium hover:text-sky-600"
-            >
-              Dúvidas
-            </Link>
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-sky-500 text-white text-xs font-semibold shadow-sm"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Falar no WhatsApp</span>
-            </a>
-          </div>
-        )}
-      </header>
-
-      {/* ================= HERO ================= */}
-      <section id="inicio" className="pt-16 pb-20 md:pt-24 md:pb-28 relative overflow-hidden">
-        {/* Soft friendly ambient glow */}
-        <div className="absolute top-10 right-1/4 w-80 h-80 bg-sky-100/70 rounded-full blur-3xl -z-10 pointer-events-none" />
-        <div className="absolute bottom-10 left-10 w-72 h-72 bg-blue-100/50 rounded-full blur-3xl -z-10 pointer-events-none" />
-
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Texto Principal */}
-            <div className="lg:col-span-7 space-y-7">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 text-sky-800 text-xs font-medium border border-sky-200/80">
-                <span className="w-2 h-2 rounded-full bg-sky-500"></span>
-                Atendimento Clínico & Mediação Escolar
+        <div className="max-w-[1080px] mx-auto px-6 md:px-10">
+          <div className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-14">
+            
+            {/* Lado Esquerdo: Textos Autorais */}
+            <div className="flex-1 text-center md:text-left space-y-5">
+              {/* Badge de Registro */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#D1E3EC] shadow-xs text-xs md:text-sm font-semibold tracking-wide text-[#16425B]">
+                <span className="w-2 h-2 rounded-full bg-[#2F6690]"></span>
+                <span>Psicóloga Clínica & Comportamental</span>
+                <span className="text-slate-300">•</span>
+                <span className="text-[#B58327] font-bold">{crp}</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-slate-900 tracking-tight leading-[1.18]">
-                Ciência, acolhimento e propósito no{" "}
-                <span className="font-semibold text-sky-600">
-                  desenvolvimento infantil.
-                </span>
+              {/* Título com Personalidade Própria */}
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.35rem] font-normal leading-[1.15] text-[#0F2942]">
+                Construindo caminhos seguros para a autonomia e o florescer de cada indivíduo.
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-xl">
-                Sou a <strong>Dra. Gesilane Maurício</strong>, Psicóloga com atuação voltada à 
-                <strong> Assistência Terapêutica em ABA</strong> e à <strong>Mediação Escolar</strong>. 
-                Construo pontes seguras para que cada criança alcance autonomia, comunicação e confiança.
+              {/* Divisor Delicado */}
+              <div className="flex items-center justify-center md:justify-start gap-3 py-1">
+                <span className="w-14 h-[1.5px] bg-gradient-to-r from-transparent to-[#2F6690]" />
+                <Sparkles className="w-4 h-4 text-[#2F6690]" />
+                <span className="w-14 h-[1.5px] bg-gradient-to-r from-[#2F6690] to-transparent" />
+              </div>
+
+              {/* Descrição Autoral */}
+              <p className="text-[#4B5563] text-base md:text-lg leading-relaxed max-w-[500px]">
+                Sou a <strong>Dra. Gesilane Maurício</strong>. Uno a ciência da <strong>Análise do Comportamento Aplicada (ABA)</strong> e a <strong>Mediação Escolar</strong> à sensibilidade clínica, criando pontes sólidas entre família, escola e indivíduo.
               </p>
 
-              {/* Botões Amigáveis */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              {/* Botão de Agendamento */}
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
                 <a
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white font-medium text-sm transition-all shadow-md shadow-sky-500/20 hover:shadow-sky-500/35 active:scale-95"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#16425B] hover:bg-[#0F2942] text-white text-sm md:text-base font-semibold shadow-lg shadow-[#16425B]/20 transition-all duration-200 active:scale-95"
                 >
-                  <MessageCircle className="w-4 h-4" />
-                  <span>Entrar em contato</span>
+                  <MessageCircle className="w-4 h-4 text-[#E8F1F5]" />
+                  <span>Agendar Consulta / Avaliação</span>
+                  <ChevronRight className="w-4 h-4 nudge" />
                 </a>
+
                 <Link
                   href="#atuacao"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-slate-700 hover:text-sky-600 hover:bg-sky-50 transition-colors text-sm font-medium border border-slate-200/80 hover:border-sky-200"
+                  className="text-xs sm:text-sm font-semibold text-[#2F6690] hover:text-[#16425B] underline underline-offset-4"
                 >
-                  <span>Conhecer atuação</span>
-                  <ArrowRight className="w-4 h-4 text-sky-500" />
+                  Conhecer áreas de atuação ↓
                 </Link>
               </div>
             </div>
 
-            {/* Imagem com Borda Suave */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-lg shadow-sky-900/5 border-4 border-white bg-white">
+            {/* Lado Direito: Foto com Arco Azul */}
+            <div className="w-full max-w-[340px] sm:max-w-[380px] md:max-w-[430px] flex-shrink-0">
+              <div className="relative aspect-[4/5] arch-media overflow-hidden shadow-2xl border-4 border-white bg-white">
                 <Image
                   src="/images/gesilane-hero.jpg"
-                  alt="Dra. Gesilane Maurício"
+                  alt="Dra. Gesilane Maurício - Psicóloga CRP 20/14363"
                   fill
                   className="object-cover object-top"
                   priority
                 />
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* ================= SOBRE MIM ================= */}
-      <section id="sobre" className="py-20 bg-white border-y border-sky-100/70">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <div className="md:col-span-5">
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm border-2 border-sky-100/60">
-                <Image
-                  src="/images/gesilane-about.jpg"
-                  alt="Dra. Gesilane Maurício em atuação"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+      {/* ═══ 2. CANAIS DIRETOS DE ATENDIMENTO ═══ */}
+      <section className="bg-white py-12 border-b border-[#E2E8F0]">
+        <div className="max-w-[540px] mx-auto px-6 space-y-3.5">
+          {/* Card WhatsApp */}
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative flex items-center gap-4 p-5 md:p-6 rounded-[24px] bg-gradient-to-br from-[#16425B] to-[#2F6690] text-white shadow-xl shadow-[#16425B]/15 transition-transform hover:-translate-y-0.5 active:scale-98 overflow-hidden"
+          >
+            <div className="w-12 h-12 rounded-full bg-white/15 backdrop-blur-sm text-white flex items-center justify-center shrink-0 border border-white/20">
+              <MessageCircle className="w-6 h-6" />
             </div>
-
-            <div className="md:col-span-7 space-y-6">
-              <span className="text-xs uppercase font-semibold tracking-wider text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200/60">
-                Sobre Minha Prática
-              </span>
-              <h2 className="text-3xl font-light text-slate-900 tracking-tight">
-                Um olhar integral para a singularidade de cada criança.
-              </h2>
-              <div className="space-y-4 text-slate-600 text-base leading-relaxed font-normal">
-                <p>
-                  Acredito que o verdadeiro progresso acontece no equilíbrio entre a prática baseada em evidências científicas e o afeto sincero.
-                </p>
-                <p>
-                  Minha trajetória combina a psicologia clínica com a vivência prática como <strong>Assistente Terapêutica (AT) em ABA</strong> e <strong>Mediadora Escolar</strong>, acompanhando crianças com Transtorno do Espectro Autista (TEA) e outras singularidades do desenvolvimento no seu dia a dia real: em casa, na clínica e na escola.
-                </p>
-              </div>
-
-              {/* 3 Pilares com Toque Azul */}
-              <div className="grid grid-cols-3 gap-4 pt-4 border-t border-sky-100">
-                <div>
-                  <p className="text-lg font-semibold text-sky-950">Ciência</p>
-                  <p className="text-xs text-slate-500 mt-0.5">Protocolos com eficácia comprovada</p>
-                </div>
-                <div>
-                  <p className="text-lg font-semibold text-sky-950">Afeto</p>
-                  <p className="text-xs text-slate-500 mt-0.5">Vínculo e respeito ao tempo individual</p>
-                </div>
-                <div>
-                  <p className="text-lg font-semibold text-sky-950">Inclusão</p>
-                  <p className="text-xs text-slate-500 mt-0.5">Integração entre família e escola</p>
-                </div>
-              </div>
+            <div className="flex-1">
+              <p className="font-display text-xl font-semibold leading-tight">Atendimento via WhatsApp</p>
+              <p className="text-xs text-white/80 mt-0.5">{whatsappDisplay} • Mensagens e Agendamentos</p>
             </div>
-          </div>
+            <ChevronRight className="w-5 h-5 text-sky-200 group-hover:translate-x-1 transition-transform" />
+          </a>
+
+          {/* Card E-mail */}
+          <a
+            href={mailtoLink}
+            className="flex items-center gap-4 p-4 md:p-5 rounded-full bg-[#F8FAFC] border border-[#D1E3EC] text-[#1F2937] hover:border-[#2F6690] hover:bg-white hover:shadow-md transition-all group"
+          >
+            <div className="w-10 h-10 rounded-full bg-[#E8F1F5] text-[#16425B] flex items-center justify-center shrink-0">
+              <Mail className="w-5 h-5" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-semibold text-[#1F2937] leading-tight">Contato por E-mail</p>
+              <p className="text-xs text-[#4B5563] truncate mt-0.5">{emailAddress}</p>
+            </div>
+            <ChevronRight className="w-4 h-4 text-[#2F6690] group-hover:translate-x-1 transition-transform" />
+          </a>
         </div>
       </section>
 
-      {/* ================= ÁREAS DE ATUAÇÃO ================= */}
-      <section id="atuacao" className="py-24 bg-[#F7F9FC]">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="max-w-xl mb-14">
-            <span className="text-xs uppercase font-semibold tracking-wider text-sky-700 bg-sky-100/60 px-3 py-1 rounded-full">
-              Especialidades
+      {/* ═══ 3. QUANDO BUSCAR APOIO PROFISSIONAL? (TEXTOS REESCRITOS) ═══ */}
+      <section className="py-20 md:py-24 bg-[#F8FAFC]" id="sinais">
+        <div className="max-w-[840px] mx-auto px-6">
+          <div className="text-center space-y-3 mb-12">
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#2F6690] bg-[#E8F1F5] px-3.5 py-1 rounded-full border border-[#D1E3EC]">
+              Compreensão e Diagnóstico
             </span>
-            <h2 className="text-3xl font-light text-slate-900 tracking-tight mt-2">
-              Áreas de Atuação
+            <h2 className="font-display text-3xl sm:text-4xl text-[#0F2942] font-normal max-w-xl mx-auto">
+              Sinais e comportamentos que merecem um olhar atento e especializado.
             </h2>
-            <p className="text-slate-500 text-sm mt-2">
-              Suporte estruturado para promover autonomia, comunicação funcional e convivência saudável.
+            <p className="text-[#4B5563] text-sm md:text-base max-w-lg mx-auto">
+              Cada manifestação comportamental carrega um significado. Identificar as causas precocemente transforma a jornada da criança:
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <div className="p-8 rounded-2xl bg-white border border-sky-100 shadow-sm flex flex-col justify-between hover:border-sky-300 hover:shadow-md transition-all">
-              <div className="space-y-4">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
-                  <Brain className="w-5 h-5" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            {[
+              "Dificuldade na regulação e desajustes emocionais intensos diante de 'nãos'",
+              "Atrasos significativos na aquisição da linguagem, fala ou comunicação alternativa",
+              "Dificuldades de socialização e interação espontânea com pares da mesma idade",
+              "Sensibilidade auditiva, tátil ou seletividade alimentar severa",
+              "Desafios de permanência e engajamento em atividades escolares estruturadas",
+              "Comportamentos rígidos, repetitivos ou resistência a pequenas mudanças na rotina",
+              "Dificuldades motoras finas, coordenação ou autonomia no autocuidado diário",
+              "Necessidade de apoio individualizado (mediação) dentro da sala de aula",
+            ].map((sinal, idx) => (
+              <div
+                key={idx}
+                className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs"
+              >
+                <div className="w-6 h-6 rounded-full bg-[#E8F1F5] text-[#16425B] flex items-center justify-center shrink-0 mt-0.5">
+                  <CheckCircle2 className="w-4 h-4 stroke-[2.2]" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 leading-snug">
-                  Assistência Terapêutica em ABA
-                </h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  Aplicação individualizada de programas comportamentais para desenvolvimento de linguagem, habilidades sociais e autonomia diária para indivíduos no espectro autista (TEA).
-                </p>
+                <p className="text-sm text-[#1F2937] leading-relaxed">{sinal}</p>
               </div>
-              <div className="pt-6">
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-semibold text-sky-600 hover:text-sky-800 inline-flex items-center gap-1"
-                >
-                  <span>Saber mais</span>
-                  <ArrowRight className="w-3 h-3" />
-                </a>
-              </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Card 2 */}
-            <div className="p-8 rounded-2xl bg-white border border-sky-100 shadow-sm flex flex-col justify-between hover:border-sky-300 hover:shadow-md transition-all">
-              <div className="space-y-4">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
-                  <GraduationCap className="w-5 h-5" />
-                </div>
-                <h3 className="text-lg font-semibold text-slate-900 leading-snug">
-                  Mediação Escolar Inclusiva
-                </h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  Acompanhamento focado na permanência produtiva do aluno na sala de aula, adaptação de rotinas pedagógicas e facilitação da interação com colegas e professores.
-                </p>
-              </div>
-              <div className="pt-6">
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-semibold text-sky-600 hover:text-sky-800 inline-flex items-center gap-1"
-                >
-                  <span>Saber mais</span>
-                  <ArrowRight className="w-3 h-3" />
-                </a>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="p-8 rounded-2xl bg-white border border-sky-100 shadow-sm flex flex-col justify-between hover:border-sky-300 hover:shadow-md transition-all">
-              <div className="space-y-4">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
-                  <Heart className="w-5 h-5" />
-                </div>
-                <h3 className="text-lg font-semibold text-slate-900 leading-snug">
-                  Psicologia & Suporte Familiar
-                </h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  Escuta terapêutica acolhedora, regulação emocional, alinhamento de rotinas familiares e suporte parental para lidar com os desafios do desenvolvimento.
-                </p>
-              </div>
-              <div className="pt-6">
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-semibold text-sky-600 hover:text-sky-800 inline-flex items-center gap-1"
-                >
-                  <span>Saber mais</span>
-                  <ArrowRight className="w-3 h-3" />
-                </a>
-              </div>
-            </div>
+          <div className="mt-10 p-6 rounded-2xl bg-white border border-[#D1E3EC] text-center max-w-2xl mx-auto shadow-xs">
+            <p className="font-display italic text-lg sm:text-xl text-[#16425B] leading-relaxed">
+              “O acolhimento correto substitui a incerteza pelo conhecimento prático. Saber como agir é o maior presente que você pode oferecer ao desenvolvimento do seu filho.”
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ================= METODOLOGIA (AZUL SERENO E CONFORTÁVEL) ================= */}
-      <section id="metodo" className="py-20 bg-gradient-to-br from-sky-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-5xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-            <div className="md:col-span-7 space-y-6 text-left">
-              <span className="inline-block text-xs uppercase font-medium tracking-widest text-sky-300 bg-sky-800/50 px-3.5 py-1 rounded-full border border-sky-700/50">
-                Abordagem Baseada em Evidências
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-light tracking-tight text-white">
-                Por que trabalhar com a metodologia ABA?
-              </h2>
-              <p className="text-sky-100/90 text-sm sm:text-base leading-relaxed font-light">
-                A Análise do Comportamento Aplicada é o padrão ouro reconhecido mundialmente. Através de metas graduais, reforçamento positivo e acompanhamento de dados, transformamos desafios diários em conquistas reais de autonomia.
-              </p>
-              <div className="pt-2">
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-sky-50 text-sky-900 text-xs font-semibold transition-all shadow-md active:scale-95"
-                >
-                  <MessageCircle className="w-3.5 h-3.5 text-sky-600" />
-                  <span>Tirar dúvidas sobre a metodologia</span>
-                </a>
-              </div>
-            </div>
-
-            <div className="md:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-xs aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20">
-                <Image
-                  src="/images/gesilane-therapy.jpg"
-                  alt="Dra. Gesilane Maurício em terapia"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= FAQ ================= */}
-      <section id="duvidas" className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <span className="text-xs uppercase font-semibold tracking-wider text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200/60">
-              Esclarecimentos
+      {/* ═══ 4. ÁREAS DE ATUAÇÃO INTEGRADA ═══ */}
+      <section className="py-20 md:py-24 bg-white border-y border-[#E2E8F0]" id="atuacao">
+        <div className="max-w-[980px] mx-auto px-6">
+          <div className="text-center space-y-3 mb-14">
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#2F6690]">
+              Especialidades Clínicas & Práticas
             </span>
-            <h2 className="text-2xl sm:text-3xl font-light text-slate-900 tracking-tight mt-2">
-              Perguntas Frequentes
+            <h2 className="font-display text-3xl sm:text-4xl text-[#0F2942] font-normal">
+              Apoio completo para cada ambiente da vida da criança.
             </h2>
+            <p className="text-[#4B5563] text-sm md:text-base max-w-md mx-auto">
+              Intervenções integradas que alinham evidências científicas e sensibilidade humana:
+            </p>
           </div>
 
-          <div className="divide-y divide-sky-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               {
-                q: "Qual a função da Assistente Terapêutica (AT)?",
-                a: "A AT atua diretamente nos ambientes naturais da criança (casa, escola e passeios), aplicando os treinos de habilidades comportamentais e sociais propostos no plano terapêutico.",
+                title: "Assistência Terapêutica em ABA",
+                desc: "Aplicação intensiva de protocolos comportamentais com foco no aprendizado de habilidades funcionais, comunicação e independência para pessoas com TEA.",
+                icon: <Brain className="w-6 h-6 text-[#16425B]" />,
               },
               {
-                q: "Como a mediação escolar contribui com a escola?",
-                a: "O mediador facilita a inclusão prática, auxiliando nas adaptações de atividades, no manejo de sobrecargas sensoriais e fortalecendo os laços com colegas e educadores.",
+                title: "Mediação Escolar Especializada",
+                desc: "Atuação direta em ambiente escolar para adaptar comandos pedagógicos, prevenir sobrecargas e facilitar a socialização real com colegas.",
+                icon: <GraduationCap className="w-6 h-6 text-[#16425B]" />,
               },
               {
-                q: "Como solicitar um orçamento ou consulta?",
-                a: "Basta clicar nos botões de WhatsApp espalhados pela página para conversar diretamente e agendar um alinhamento inicial.",
+                title: "Manejo Comportamental & Crises",
+                desc: "Estratégias estruturadas baseadas em reforçamento positivo para compreender funções comportamentais e reduzir comportamentos disruptivos.",
+                icon: <Sparkles className="w-6 h-6 text-[#16425B]" />,
               },
-            ].map((faq, i) => (
-              <div key={i} className="py-4">
-                <button
-                  onClick={() => toggleFaq(i)}
-                  className="w-full text-left flex justify-between items-center py-2 text-slate-800 font-medium text-sm hover:text-sky-600 transition-colors"
-                >
-                  <span>{faq.q}</span>
-                  <ChevronDown
-                    className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-                      openFaq === i ? "rotate-180 text-sky-600" : ""
-                    }`}
-                  />
-                </button>
-                {openFaq === i && (
-                  <p className="pt-2 pb-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {faq.a}
+              {
+                title: "Comunicação Funcional & PECS",
+                desc: "Estímulo de repertório verbal, comunicação aumentativa e alternativa para que a criança consiga expressar seus desejos com tranquilidade.",
+                icon: <Smile className="w-6 h-6 text-[#16425B]" />,
+              },
+              {
+                title: "Orientação e Parceria Familiar",
+                desc: "Capacitação contínua de pais e cuidadores para que as estratégias aplicadas na terapia continuem funcionando de maneira fluida no lar.",
+                icon: <HeartHandshake className="w-6 h-6 text-[#16425B]" />,
+              },
+              {
+                title: "Treino de Autonomia (AVDs)",
+                desc: "Desenvolvimento de competências para atividades de vida diária: alimentação independente, desfralde, higiene e rotina escolar.",
+                icon: <Compass className="w-6 h-6 text-[#16425B]" />,
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-3xl bg-[#F8FAFC] border border-[#E2E8F0] shadow-xs flex flex-col justify-between hover:border-[#2F6690] hover:bg-white hover:shadow-md transition-all"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#E8F1F5] flex items-center justify-center mb-4 border border-[#D1E3EC]">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-display text-xl font-semibold text-[#0F2942] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
+                    {item.desc}
                   </p>
-                )}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ================= CTA FINAL / CONTATO ================= */}
-      <section className="py-20 bg-[#F7F9FC] border-t border-sky-100">
-        <div className="max-w-3xl mx-auto px-6 text-center space-y-7">
-          <span className="text-xs uppercase font-semibold tracking-wider text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200/60">
-            Fale Diretamente Comigo
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-light text-slate-900 tracking-tight">
-            Pronto para dar o próximo passo no desenvolvimento?
-          </h2>
-          <p className="text-slate-500 text-sm max-w-md mx-auto">
-            Entre em contato para agendar uma consulta, tirar dúvidas sobre mediação escolar ou solicitar uma proposta terapêutica.
-          </p>
-
-          {/* Cards de Contato Direto */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto pt-2">
-            {/* WhatsApp Card */}
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-5 rounded-2xl bg-white border border-sky-100 shadow-xs hover:border-sky-300 hover:shadow-md transition-all group flex flex-col items-center gap-2"
-            >
-              <div className="w-10 h-10 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Phone className="w-4 h-4" />
-              </div>
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide">WhatsApp</p>
-              <p className="text-sm font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
-                {whatsappDisplay}
-              </p>
-              <span className="text-[11px] text-sky-600 font-medium">Clique para conversar →</span>
-            </a>
-
-            {/* Email Card */}
-            <a
-              href={mailtoLink}
-              className="p-5 rounded-2xl bg-white border border-sky-100 shadow-xs hover:border-sky-300 hover:shadow-md transition-all group flex flex-col items-center gap-2"
-            >
-              <div className="w-10 h-10 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Mail className="w-4 h-4" />
-              </div>
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide">E-mail</p>
-              <p className="text-sm font-bold text-slate-900 group-hover:text-sky-600 transition-colors break-all">
-                {emailAddress}
-              </p>
-              <span className="text-[11px] text-sky-600 font-medium">Clique para enviar e-mail →</span>
-            </a>
-          </div>
-
-          <div className="pt-2">
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-xs font-semibold transition-all shadow-md shadow-sky-500/20 active:scale-95"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>Iniciar conversa no WhatsApp</span>
-            </a>
+      {/* ═══ 5. POR QUE INTERVIR CEDO? (BLOCO COM FOCO EM ESCLARECIMENTO) ═══ */}
+      <section className="py-16 md:py-20 bg-[#F0F5F9]">
+        <div className="max-w-[720px] mx-auto px-6">
+          <div className="p-8 sm:p-12 rounded-[32px] bg-white border border-[#D1E3EC] text-center space-y-5 shadow-sm">
+            <span className="text-xs uppercase font-semibold tracking-wider text-[#B58327] bg-[#FAF3E0] px-3.5 py-1 rounded-full border border-[#B58327]/30">
+              A Importância do Tempo
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl text-[#0F2942] font-normal leading-tight">
+              A neuroplasticidade infantil torna o momento presente o melhor para agir.
+            </h2>
+            <p className="text-[#4B5563] text-sm sm:text-base leading-relaxed">
+              O cérebro da criança está em constante formação. Quanto mais cedo são oferecidos estímulos direcionados e compreendidas as particularidades do desenvolvimento, maiores são os ganhos de qualidade de vida, autonomia e bem-estar para o futuro.
+            </p>
+            <div className="pt-2">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#16425B] hover:bg-[#0F2942] text-white text-sm font-semibold shadow-md transition-all"
+              >
+                <span>Falar diretamente no WhatsApp</span>
+                <ChevronRight className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ================= FOOTER ================= */}
-      <footer className="py-8 bg-white border-t border-sky-100 text-slate-500 text-xs">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-          <div>
-            <p className="text-slate-700 font-semibold">
-              Dra. Gesilane Maurício • Psicóloga
-            </p>
-            <p className="text-[11px] text-slate-400 mt-0.5">
-              WhatsApp: {whatsappDisplay} | E-mail: {emailAddress}
+      {/* ═══ 6. O PROCESSO DE ACOMPANHAMENTO COMPORTAMENTAL ═══ */}
+      <section className="py-20 md:py-24 bg-white" id="metodologia">
+        <div className="max-w-[720px] mx-auto px-6">
+          <div className="text-center space-y-3 mb-14">
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#2F6690]">
+              Metodologia de Atendimento
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl text-[#0F2942] font-normal">
+              Como estruturamos o percurso terapêutico
+            </h2>
+          </div>
+
+          <div className="relative border-l-2 border-[#2F6690]/30 ml-5 sm:ml-6 space-y-10 pl-6 sm:pl-8">
+            {[
+              {
+                num: "01",
+                title: "Anamnese e Avaliação Comportamental",
+                desc: "Mapeamento das habilidades atuais, preferências da criança, histórico do desenvolvimento e queixas principais trazidas pela família.",
+              },
+              {
+                num: "02",
+                title: "Construção do Plano Individualizado (PTI)",
+                desc: "Definição de metas claras e mensuráveis para comunicação, socialização, redução de comportamentos desafiadores e rotina.",
+              },
+              {
+                num: "03",
+                title: "Intervenção Prática e Naturalística",
+                desc: "Aplicação dos treinos comportamentais através de brincadeiras estruturadas e reforço positivo em ambiente clínico, domiciliar ou escolar.",
+              },
+              {
+                num: "04",
+                title: "Acompanhamento de Dados e Orientação Parental",
+                desc: "Revisão periódica do progresso com base em registros claros, ajustando os objetivos e alinhando práticas com pais e professores.",
+              },
+            ].map((step, idx) => (
+              <div key={idx} className="relative">
+                <span className="absolute -left-[35px] sm:-left-[43px] top-0 w-8 h-8 rounded-full bg-white border-2 border-[#16425B] text-[#16425B] font-display font-bold text-xs flex items-center justify-center shadow-xs">
+                  {step.num}
+                </span>
+                <h3 className="font-display text-xl font-semibold text-[#0F2942] mb-1">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-[#4B5563] leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ 7. GALERIA DE RECURSOS E MATERIAIS TERAPÊUTICOS ═══ */}
+      <section className="py-20 md:py-24 bg-[#F8FAFC] border-y border-[#E2E8F0]" id="recursos">
+        <div className="max-w-[1020px] mx-auto px-6">
+          <div className="text-center space-y-3 mb-12">
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#2F6690]">
+              Ambiente de Estímulo & Recursos
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl text-[#0F2942] font-normal">
+              A ciência aplicada de forma leve, envolvente e acolhedora
+            </h2>
+            <p className="text-[#4B5563] text-sm md:text-base max-w-lg mx-auto">
+              Cada material é selecionado com intencionalidade clínica para estimular o foco, a comunicação espontânea e a sensação de segurança:
             </p>
           </div>
-          <p className="text-slate-400">© 2026 Todos os direitos reservados.</p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="space-y-2">
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-sm border border-[#D1E3EC] bg-white">
+                <Image
+                  src="/images/atendimento-ludico-1.jpeg"
+                  alt="Brinquedos pedagógicos e blocos de encaixe estruturados"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-xs text-center font-medium text-[#16425B]">
+                Blocos de raciocínio lógico e emparelhamento
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-sm border border-[#D1E3EC] bg-white">
+                <Image
+                  src="/images/recurso-aba.jpeg"
+                  alt="Recursos de coordenação motora fina e treino viso-motor"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-xs text-center font-medium text-[#16425B]">
+                Coordenação motora fina e atenção compartilhada
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-sm border border-[#D1E3EC] bg-white">
+                <Image
+                  src="/images/recurso-jogos.jpeg"
+                  alt="Jogos para compreensão de regras e interação social"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-xs text-center font-medium text-[#16425B]">
+                Jogos sociais, turnos de espera e cooperação
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-sm border border-[#D1E3EC] bg-white">
+                <Image
+                  src="/images/atendimento-ludico-2.jpeg"
+                  alt="Espaço preparado para acolhimento e escuta qualificada"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-xs text-center font-medium text-[#16425B]">
+                Espaço adaptado para acolhimento e regulação
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-sm border border-[#D1E3EC] bg-white">
+                <Image
+                  src="/images/recurso-desenho.jpeg"
+                  alt="Materiais para expressão criativa e organização de pensamentos"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-xs text-center font-medium text-[#16425B]">
+                Expressão criativa e compreensão de emoções
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-sm border border-[#D1E3EC] bg-white">
+                <Image
+                  src="/images/recurso-sensorial.jpeg"
+                  alt="Materiais sensoriais para autorregulação e calma"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-xs text-center font-medium text-[#16425B]">
+                Estímulos sensoriais para modulação do humor
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ 8. CONHEÇA A PSICÓLOGA (SOBRE MIM DETALHADO) ═══ */}
+      <section className="py-20 md:py-24 bg-white" id="sobre">
+        <div className="max-w-[940px] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            
+            {/* Foto Editorial em Arco */}
+            <div className="md:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[3/4] arch-media overflow-hidden shadow-xl border-4 border-white bg-white">
+                <Image
+                  src="/images/gesilane-about.jpg"
+                  alt="Dra. Gesilane Maurício - Psicóloga CRP 20/14363"
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
+            </div>
+
+            {/* Texto Biográfico */}
+            <div className="md:col-span-7 space-y-5">
+              <span className="text-xs font-semibold tracking-widest uppercase text-[#2F6690]">
+                Trajetória e Propósito
+              </span>
+
+              <div>
+                <h2 className="font-display text-3xl sm:text-4xl text-[#0F2942] font-normal leading-tight">
+                  Dra. Gesilane Maurício
+                </h2>
+                <p className="text-xs font-bold uppercase tracking-widest text-[#B58327] mt-1">
+                  Psicóloga Clínica • {crp}
+                </p>
+              </div>
+
+              <div className="space-y-3.5 text-[#4B5563] text-sm sm:text-base leading-relaxed">
+                <p>
+                  Minha prática profissional é guiada pelo compromisso ético de promover a evolução genuína de cada assistido. Dedico meus estudos e intervenções ao campo do neurodesenvolvimento infantil, com ênfase no <strong>Transtorno do Espectro Autista (TEA)</strong> e dificuldades de aprendizagem.
+                </p>
+                <p>
+                  Com sólida experiência como <strong>Assistente Terapêutica (AT) em ABA</strong> e <strong>Mediadora Escolar</strong>, atuo conectando as demandas pedagógicas da escola às necessidades individuais do aluno, transformando desafios cotidianos em autonomia prática.
+                </p>
+                <p>
+                  Acredito que o processo terapêutico só é completo quando pais e educadores se tornam parceiros ativos. Trabalhamos juntos para que a criança seja protagonista de sua própria história com confiança e dignidade.
+                </p>
+              </div>
+
+              <div className="pt-2">
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#16425B] hover:bg-[#0F2942] text-white text-xs sm:text-sm font-semibold transition-all shadow-md active:scale-95"
+                >
+                  <MessageCircle className="w-4 h-4 text-[#D1E3EC]" />
+                  <span>Conversar com a Dra. Gesilane</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ 9. CTA FINAL - BANNER AZUL PROFUNDO COM TEXTURA ═══ */}
+      <section className="relative py-20 md:py-24 bg-gradient-to-br from-[#16425B] via-[#0F2942] to-[#0A1D30] text-white overflow-hidden" id="contato">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#2F6690_1px,transparent_1px)] [background-size:16px_16px]" />
+
+        <div className="relative max-w-[680px] mx-auto px-6 text-center space-y-6">
+          <span className="text-xs uppercase font-medium tracking-widest text-sky-300 bg-white/10 px-3.5 py-1 rounded-full border border-white/15">
+            Dê o Primeiro Passo
+          </span>
+
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.2]">
+            O desenvolvimento do seu filho merece atenção especializada, científica e afetuosa.
+          </h2>
+
+          <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-lg mx-auto">
+            Entre em contato hoje mesmo para tirar dúvidas sobre avaliação inicial, atendimentos domiciliares ou mediação escolar inclusiva.
+          </p>
+
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#2F6690] hover:bg-[#265376] text-white font-semibold text-sm transition-all shadow-xl active:scale-95"
+            >
+              <span>Iniciar conversa no WhatsApp</span>
+              <ChevronRight className="w-4 h-4 nudge" />
+            </a>
+          </div>
+
+          <p className="text-xs text-white/60 pt-2">
+            Atendimento presencial e suporte escolar • {whatsappDisplay}
+          </p>
+        </div>
+      </section>
+
+      {/* ═══ 10. RODAPÉ INSTITUCIONAL ═══ */}
+      <footer className="bg-[#0A1D30] text-white/70 py-12 text-xs border-t border-white/10">
+        <div className="max-w-[940px] mx-auto px-6 text-center space-y-6">
+          <div>
+            <p className="font-display text-2xl text-white font-normal">
+              Dra. Gesilane Maurício
+            </p>
+            <p className="text-xs text-sky-300 font-semibold tracking-wider uppercase mt-0.5">
+              Psicóloga Clínica • Assistente Terapêutica ABA • {crp}
+            </p>
+          </div>
+
+          <p className="max-w-md mx-auto text-white/60 leading-relaxed text-xs">
+            Cuidado humanizado e prática baseada em evidências científicas para o desenvolvimento e autonomia de crianças e jovens.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-white/80 pt-2">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              WhatsApp: {whatsappDisplay}
+            </a>
+            <span className="hidden sm:inline">•</span>
+            <a href={mailtoLink} className="hover:text-white transition-colors">
+              {emailAddress}
+            </a>
+          </div>
+
+          <div className="pt-6 border-t border-white/10 text-white/40 text-[11px] flex flex-col sm:flex-row justify-between items-center gap-2">
+            <p>© 2026 Dra. Gesilane Maurício. Todos os direitos reservados.</p>
+            <p>{crp} • Manaus - AM</p>
+          </div>
         </div>
       </footer>
 
-      {/* ================= WHATSAPP FLUTUANTE AMIGÁVEL ================= */}
+      {/* ═══ WHATSAPP FLUTUANTE ═══ */}
       <a
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Contato via WhatsApp"
-        className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-sky-500 hover:bg-sky-600 text-white flex items-center justify-center shadow-lg shadow-sky-500/30 hover:scale-105 active:scale-95 transition-all duration-200"
+        aria-label="Falar no WhatsApp"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#16425B] hover:bg-[#0F2942] text-white flex items-center justify-center shadow-2xl hover:scale-105 active:scale-95 transition-all duration-200 border-2 border-white/20"
       >
-        <MessageCircle className="w-5 h-5" />
+        <MessageCircle className="w-7 h-7" />
       </a>
     </div>
   );
