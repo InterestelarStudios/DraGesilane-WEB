@@ -10,11 +10,11 @@ export default function Home() {
   const emailAddress = "psigeisenm13@gmail.com";
 
   const defaultWhatsAppMsg = encodeURIComponent(
-    "Olá, Dra. Gesilane! Gostaria de conversar sobre o atendimento do meu filho."
+    "Olá, Gesilane! Gostaria de conversar sobre o atendimento do meu filho."
   );
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${defaultWhatsAppMsg}`;
   const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
-    "Atendimento Psicológico - Dra. Gesilane Maurício"
+    "Atendimento Psicológico - Gesilane Maurício"
   )}`;
 
   return (
@@ -25,7 +25,7 @@ export default function Home() {
           <div className="hero-media">
             <Image
               src="/images/gesilane-hero.jpg"
-              alt="Dra. Gesilane Maurício — Psicóloga infantil, ABA e Mediação Escolar"
+              alt="Gesilane Maurício — Psicóloga infantil, ABA e Mediação Escolar"
               width={1024}
               height={792}
               priority
@@ -39,14 +39,14 @@ export default function Home() {
                 <path strokeLinecap="round" d="M4 20c4-4 8-7 13-9" />
               </svg>
               <span>Psicóloga infantil</span>
-              <span className="kicker-age">· Assistente Terapêutica ABA & Mediadora Escolar</span>
+              <span className="kicker-age">· Atendimento Presencial & Online</span>
             </p>
 
             <div className="hero-rest">
               <div className="hero-logo">
                 <Image
                   src="/images/logo-gesilane.png"
-                  alt="Dra. Gesilane Maurício — Psicóloga, CRP 20/14363"
+                  alt="Gesilane Maurício — Psicóloga, CRP 20/14363"
                   width={380}
                   height={380}
                   priority
@@ -268,8 +268,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ 6. COMO FUNCIONA ═══ */}
-      <section className="section section-cream" id="caminho">
+      {/* ═══ 7. COMO FUNCIONA ═══ */}
+      <section className="section" id="caminho">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">
@@ -286,7 +286,7 @@ export default function Home() {
               <span className="path-num" aria-hidden="true">01</span>
               <div className="path-body">
                 <h3>Conhecer</h3>
-                <p>Primeiro, conversamos com os responsáveis para conhecer a história, a rotina e as principais dificuldades percebidas.</p>
+                <p>Primeiro, conversamos com os responsáveis para conhecer a história, a rotina e as principais dificuldades percebidas (presencialmente ou online).</p>
               </div>
             </div>
 
@@ -317,8 +317,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ 7. NÃO É APENAS BRINCAR ═══ */}
-      <section className="section" id="ludico">
+      {/* ═══ 8. NÃO É APENAS BRINCAR ═══ */}
+      <section className="section section-cream" id="ludico">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">
@@ -335,8 +335,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ 8. RECURSOS (FOTOS REAIS) ═══ */}
-      <section className="section section-cream" id="recursos">
+      {/* ═══ 9. RECURSOS (FOTOS REAIS) ═══ */}
+      <section className="section" id="recursos">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">
@@ -392,14 +392,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ 9. CONHEÇA A PSICÓLOGA ═══ */}
-      <section className="section about-section" id="sobre">
+      {/* ═══ 10. CONHEÇA A PSICÓLOGA ═══ */}
+      <section className="section about-section section-cream" id="sobre">
         <div className="container">
           <div className="about-wrap">
             <div className="about-media">
               <Image
                 src="/images/gesilane-about.jpg"
-                alt="Dra. Gesilane Maurício — Psicóloga infantil"
+                alt="Gesilane Maurício — Psicóloga infantil"
                 fill
                 className="object-cover"
               />
@@ -412,10 +412,10 @@ export default function Home() {
                 </svg>
                 Conheça a psicóloga
               </p>
-              <h2>Dra. Gesilane Maurício</h2>
+              <h2>Gesilane Maurício</h2>
               <p className="about-crp">{crp}</p>
               <p className="about-text">
-                Meu trabalho é dedicado ao desenvolvimento infantil com base em evidências científicas e acolhimento humanizado, atuando diretamente como <strong>Assistente Terapêutica em ABA</strong> e <strong>Mediadora Escolar</strong>.
+                Meu trabalho é dedicado ao desenvolvimento infantil com base em evidências científicas e acolhimento humanizado, atuando diretamente como <strong>Assistente Terapêutica em ABA</strong> e <strong>Mediadora Escolar</strong> em atendimentos presenciais e online.
               </p>
               <h3 className="about-work">Meu trabalho com crianças</h3>
               <p className="about-text">
@@ -432,7 +432,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ 10. OS PAIS ═══ */}
+      {/* ═══ 11. OS PAIS ═══ */}
       <section className="section" id="pais">
         <div className="container">
           <div className="section-head">
@@ -450,7 +450,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ 11. CTA FINAL ═══ */}
+      {/* ═══ 12. CTA FINAL ═══ */}
       <section className="offer" id="agendar">
         <div className="band-media" aria-hidden="true">
           <Image
@@ -485,14 +485,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ 12. RODAPÉ ═══ */}
+      {/* ═══ 13. RODAPÉ ═══ */}
       <footer id="contato">
         <div className="footer-inner">
-          <p className="footer-name">Dra. Gesilane Maurício</p>
+          <p className="footer-name">Gesilane Maurício</p>
 
           <p className="footer-lead">
             Psicoterapia infantil, Assistente Terapêutica em ABA e Mediação Escolar, com acompanhamento integrado dos responsáveis.
           </p>
+
+          {/* Indicador de Atendimento Online & Presencial */}
+          <div className="footer-modalities">
+            <div className="footer-modality-item">
+              <span className="footer-modality-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </span>
+              <div className="footer-modality-text">
+                <strong>Atendimento Presencial</strong>
+                <span>Clínico, escolar e domiciliar</span>
+              </div>
+            </div>
+
+            <div className="footer-modality-item">
+              <span className="footer-modality-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" />
+                </svg>
+              </span>
+              <div className="footer-modality-text">
+                <strong>Atendimento Online</strong>
+                <span>Consultas à distância</span>
+              </div>
+            </div>
+          </div>
 
           <div className="footer-rule" aria-hidden="true">
             <span></span>
@@ -520,7 +548,7 @@ export default function Home() {
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">{whatsappDisplay}</a>
           </p>
 
-          <p className="footer-copy">© 2026 Dra. Gesilane Maurício · Psicóloga infantil · {crp}</p>
+          <p className="footer-copy">© 2026 Gesilane Maurício · Psicóloga infantil · {crp}</p>
         </div>
       </footer>
     </div>
