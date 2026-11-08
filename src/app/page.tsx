@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,6 +9,10 @@ export default function Home() {
   const whatsappNumber = "5592981499397";
   const whatsappDisplay = "(92) 98149-9397";
   const emailAddress = "psigeisenm13@gmail.com";
+
+  // Estado dos widgets de psicoterapia infantojuvenil
+  const [activeStage, setActiveStage] = useState<"infantil" | "adolescente">("infantil");
+  const [selectedMood, setSelectedMood] = useState<number | null>(null);
 
   const defaultWhatsAppMsg = encodeURIComponent(
     "Olá, Gesilane! Gostaria de conversar sobre o atendimento do meu filho."
@@ -38,8 +43,8 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z" />
                 <path strokeLinecap="round" d="M4 20c4-4 8-7 13-9" />
               </svg>
-              <span>Psicóloga infantil</span>
-              <span className="kicker-age">· Atendimento Presencial & Online</span>
+              <span>Psicoterapia Infantojuvenil</span>
+              <span className="kicker-age">· Crianças & Adolescentes · Presencial & Online</span>
             </p>
 
             <div className="hero-rest">
@@ -65,7 +70,7 @@ export default function Home() {
               </div>
 
               <p className="hero-sub">
-                Psicoterapia infantil, intervenção comportamental em ABA e mediação escolar para ajudar seu filho a compreender suas emoções, desenvolver habilidades e alcançar autonomia.
+                Psicoterapia infantojuvenil especializada, intervenção comportamental em ABA e mediação escolar para acompanhar cada etapa do desenvolvimento emocional, cognitivo e social com afeto e ciência.
               </p>
             </div>
           </div>
@@ -243,8 +248,184 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ═══ 4.1 WIDGET INTERATIVO: PSICOTERAPIA INFANTOJUVENIL ═══ */}
+      <section className="section" id="infantojuvenil">
+        <div className="container">
+          <div className="section-head">
+            <p className="eyebrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 20c0-8 6-14 16-15 1 10-5 16-13 16H4z" />
+              </svg>
+              Psicoterapia Infantojuvenil
+            </p>
+            <h2>Um cuidado sob medida para cada fase do crescimento</h2>
+            <p className="section-lead wide">
+              As necessidades emocionais mudam com a idade. Selecione a faixa etária para ver como a terapia atua:
+            </p>
+          </div>
+
+          {/* Abas interativas de estágio */}
+          <div className="stage-tabs">
+            <button
+              onClick={() => setActiveStage("infantil")}
+              className={`stage-tab-btn ${activeStage === "infantil" ? "active" : ""}`}
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Infância (Até 11 anos)
+            </button>
+            <button
+              onClick={() => setActiveStage("adolescente")}
+              className={`stage-tab-btn ${activeStage === "adolescente" ? "active" : ""}`}
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              Adolescência (12 a 18 anos)
+            </button>
+          </div>
+
+          {/* Card Dinâmico da Fase */}
+          <div className="stage-card-wrapper">
+            {activeStage === "infantil" ? (
+              <div>
+                <div className="stage-card-header">
+                  <div className="stage-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Psicoterapia na Infância</h3>
+                    <p>O universo do brincar e do desenvolvimento</p>
+                  </div>
+                </div>
+
+                <p className="stage-card-intro">
+                  Na infância, a comunicação acontece prioritariamente por meio de recursos lúdicos, desenhos, histórias e protocolos estruturados (como ABA). O foco é acolher a imaginação e construir as bases para a autonomia.
+                </p>
+
+                <div className="stage-topics-grid">
+                  <div className="stage-topic-item">
+                    <span className="bullet">✓</span>
+                    <p>Manejo de birras, crises de choro e tolerância à frustração</p>
+                  </div>
+                  <div className="stage-topic-item">
+                    <span className="bullet">✓</span>
+                    <p>Adaptação à rotina escolar, atenção e mediação</p>
+                  </div>
+                  <div className="stage-topic-item">
+                    <span className="bullet">✓</span>
+                    <p>Estímulo à fala, comunicação alternativa e habilidades sociais</p>
+                  </div>
+                  <div className="stage-topic-item">
+                    <span className="bullet">✓</span>
+                    <p>Acompanhamento próximo dos pais e cuidadores</p>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div>
+                <div className="stage-card-header">
+                  <div className="stage-card-icon youth">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Psicoterapia na Adolescência</h3>
+                    <p>Espaço de escuta, identidade e futuro</p>
+                  </div>
+                </div>
+
+                <p className="stage-card-intro">
+                  A adolescência é marcada por intensas transformações biológicas, sociais e emocionais. O atendimento oferece um espaço sigiloso, sem julgamentos, focado na autodescoberta e regulação das próprias decisões.
+                </p>
+
+                <div className="stage-topics-grid">
+                  <div className="stage-topic-item">
+                    <span className="bullet">✓</span>
+                    <p>Ansiedade social, pressão escolar e transições de fase</p>
+                  </div>
+                  <div className="stage-topic-item">
+                    <span className="bullet">✓</span>
+                    <p>Construção de identidade, autoimagem e autoestima</p>
+                  </div>
+                  <div className="stage-topic-item">
+                    <span className="bullet">✓</span>
+                    <p>Conflitos de convivência familiar e relações entre amigos</p>
+                  </div>
+                  <div className="stage-topic-item">
+                    <span className="bullet">✓</span>
+                    <p>Manejo de impulsividade e desenvolvimento de senso de responsabilidade</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Widget Interativo: Termômetro Emocional */}
+          <div className="mood-meter-card">
+            <h3 className="mood-meter-title">Termômetro das Emoções Infantojuvenis</h3>
+            <p className="mood-meter-sub">
+              Como tem sido o sentimento predominante do seu filho(a) ultimamente? Toque para ver uma orientação:
+            </p>
+
+            <div className="mood-buttons">
+              {[
+                { label: "Ansioso / Preocupado", emoji: "😰" },
+                { label: "Irritado / Bravo", emoji: "😤" },
+                { label: "Desanimado / Triste", emoji: "😔" },
+                { label: "Agitado / Inquieto", emoji: "⚡" },
+                { label: "Calmo / Equilibrado", emoji: "🌱" },
+              ].map((item, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setSelectedMood(selectedMood === idx ? null : idx)}
+                  className={`mood-btn ${selectedMood === idx ? "selected" : ""}`}
+                >
+                  <span className="emoji">{item.emoji}</span>
+                  <span className="label">{item.label}</span>
+                </button>
+              ))}
+            </div>
+
+            {selectedMood !== null && (
+              <div className="mood-response-box">
+                {selectedMood === 0 && (
+                  <p>
+                    <strong>Preocupações e medos intensos:</strong> Na psicoterapia infantojuvenil, ensinamos técnicas corporais e cognitivas de respiração, validação do medo e quebra de pensamentos catastróficos, tanto para crianças quanto para adolescentes.
+                  </p>
+                )}
+                {selectedMood === 1 && (
+                  <p>
+                    <strong>Irritabilidade e explosões:</strong> A raiva quase sempre esconde frustrações não expressas ou sobrecargas sensoriais. O trabalho terapêutico desenvolve alternativas saudáveis para expressar o desconforto antes do estopim.
+                  </p>
+                )}
+                {selectedMood === 2 && (
+                  <p>
+                    <strong>Isolamento ou tristeza:</strong> O desânimo prolongado pede acolhimento sensível. Ajudamos a criança ou jovem a reencontrar fontes de prazer, fortalecer a autoimagem e expressar o que dói com segurança.
+                  </p>
+                )}
+                {selectedMood === 3 && (
+                  <p>
+                    <strong>Inquietação constante:</strong> Pode estar associada a busca de estímulos, ansiedade ou demandas de autorregulação. Com ABA e rotinas estruturadas, direcionamos essa energia para conquistas produtivas.
+                  </p>
+                )}
+                {selectedMood === 4 && (
+                  <p>
+                    <strong>Equilíbrio e tranquilidade:</strong> Maravilhoso! A psicoterapia preventiva também fortalece essa base, consolidando habilidades socioemocionais para lidar com os desafios das próximas fases da vida.
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* ═══ 5. PRECISA DE TERAPIA? ═══ */}
-      <section className="section" id="duvida">
+      <section className="section section-cream" id="duvida">
         <div className="container">
           <div className="doubt">
             <p className="eyebrow">

@@ -913,6 +913,225 @@ body {
   height: 17px;
 }
 
+/* ——— WIDGETS DE PSICOTERAPIA INFANTOJUVENIL ——— */
+.stage-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.stage-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.stage-tab-btn:hover {
+  border-color: var(--sage);
+  color: var(--text);
+}
+
+.stage-tab-btn.active {
+  background: var(--sage-deep);
+  color: #FFFFFF;
+  border-color: var(--sage-deep);
+  box-shadow: 0 8px 20px rgba(76, 99, 73, 0.22);
+}
+
+.stage-card-wrapper {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 28px 24px;
+  box-shadow: var(--shadow-soft);
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.stage-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.stage-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sage-soft);
+  color: var(--sage-deep);
+  flex-shrink: 0;
+}
+
+.stage-card-icon.youth {
+  background: var(--peach-soft);
+  color: var(--peach-deep);
+}
+
+.stage-card-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.stage-card-header p {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--sage-deep);
+  margin-top: 2px !important;
+}
+
+.stage-card-intro {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 20px !important;
+}
+
+.stage-topics-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 580px) {
+  .stage-topics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.stage-topic-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.stage-topic-item span.bullet {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--sage-soft);
+  color: var(--sage-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.stage-topic-item p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+/* Termômetro Emocional Interativo */
+.mood-meter-card {
+  margin-top: 32px;
+  padding: 24px;
+  background: linear-gradient(135deg, var(--cream) 0%, #FFFFFF 100%);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  text-align: center;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mood-meter-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 6px !important;
+}
+
+.mood-meter-sub {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-bottom: 18px !important;
+}
+
+.mood-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.mood-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 14px;
+  border-radius: 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 78px;
+}
+
+.mood-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--sage);
+}
+
+.mood-btn.selected {
+  background: var(--sage-soft);
+  border-color: var(--sage);
+  box-shadow: 0 4px 12px rgba(76, 99, 73, 0.12);
+}
+
+.mood-btn span.emoji {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.mood-btn span.label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.mood-response-box {
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: var(--white);
+  border: 1px solid var(--sage);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--sage-deep);
+  text-align: left;
+  animation: fadeIn 0.3s ease;
+}
+
 /* ——— MODALIDADES NO RODAPÉ ——— */
 .footer-modalities {
   display: flex;

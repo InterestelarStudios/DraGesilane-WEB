@@ -16,25 +16,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Gesilane Maurício | Psicóloga infantil, ABA e Mediação Escolar",
+  title: "Gesilane Maurício | Psicoterapia Infantojuvenil, ABA e Mediação Escolar",
   description:
-    "Psicóloga infantil para crianças, Assistente Terapêutica em ABA e Mediadora Escolar. CRP 20/14363. Atendimento presencial e online. Psicoterapia e acompanhamento comportamental para ajudar seu filho a compreender emoções e desenvolver autonomia.",
+    "Psicoterapia infantojuvenil (crianças e adolescentes), Assistente Terapêutica em ABA e Mediadora Escolar. CRP 20/14363. Atendimento presencial e online para ajudar crianças e jovens no desenvolvimento emocional e cognitivo.",
   keywords: [
     "Gesilane Maurício",
-    "Gesilane Maurício Psicóloga",
-    "Psicóloga infantil Manaus",
-    "Psicóloga infantil online",
-    "Atendimento presencial e online",
-    "CRP 20/14363",
-    "Terapia ABA",
-    "Assistente Terapêutica",
+    "Psicoterapia Infantojuvenil",
+    "Psicologia Infantil Manaus",
+    "Psicóloga para adolescentes",
+    "Terapia ABA Manaus",
     "Mediação Escolar",
-    "Autismo Infantil"
+    "Atendimento presencial e online",
+    "CRP 20/14363"
   ],
   authors: [{ name: "Gesilane Maurício" }],
   openGraph: {
-    title: "Gesilane Maurício | Psicóloga infantil",
-    description: "Cuidar das emoções também faz parte da infância. Atendimento presencial e online especializado em desenvolvimento e ABA.",
+    title: "Gesilane Maurício | Psicoterapia Infantojuvenil",
+    description: "Cuidar das emoções faz parte de cada fase do crescimento. Psicoterapia infantojuvenil presencial e online.",
     type: "website",
     locale: "pt_BR",
   },
